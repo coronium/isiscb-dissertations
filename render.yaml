@@ -29,7 +29,7 @@ services:
   - type: web
     name: isiscb-dissertations
     runtime: static
-    staticPublishPath: ./frontend
+    staticPublishPath: frontend
     headers:
       - path: /*
         name: Cache-Control
