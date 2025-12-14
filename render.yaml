@@ -1,0 +1,40 @@
+services:
+  # API Service
+  - type: web
+    name: isiscb-dissertations-api
+    runtime: node
+    buildCommand: cd api && npm install
+    startCommand: cd api && npm start
+    envVars:
+      - key: NODE_ENV
+        value: production
+      - key: SUPABASE_URL
+        sync: false
+      - key: SUPABASE_ANON_KEY
+        sync: false
+      - key: SUPABASE_SERVICE_KEY
+        sync: false
+      - key: JWT_SECRET
+        generateValue: true
+      - key: VIEWER_ACCESS_CODE_HASH
+        sync: false
+      - key: EDITOR_AX_PASSWORD_HASH
+        sync: false
+      - key: EDITOR_SPW_PASSWORD_HASH
+        sync: false
+      - key: EDITOR_VIETH_PASSWORD_HASH
+        sync: false
+
+  # Frontend Static Site
+  - type: web
+    name: isiscb-dissertations
+    runtime: static
+    staticPublishPath: ./frontend
+    headers:
+      - path: /*
+        name: Cache-Control
+        value: public, max-age=3600
+    routes:
+      - type: rewrite
+        source: /*
+        destination: /index.html

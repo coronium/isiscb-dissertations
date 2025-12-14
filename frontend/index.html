@@ -1,0 +1,469 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IsisCB Projects - Dissertations</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles/isiscb-base.css">
+    <link rel="stylesheet" href="styles/app.css">
+</head>
+<body>
+    <!-- Login Page -->
+    <div id="login-page" class="page">
+        <div class="login-container">
+            <div class="login-branding">
+                <div class="app-logo app-logo-lg">
+                    <div class="app-logo-line"></div>
+                    <div class="app-logo-line"></div>
+                    <div class="app-logo-line"></div>
+                </div>
+                <div class="app-branding">
+                    <span class="app-title">IsisCB Projects</span>
+                    <span class="app-project-name">Dissertations</span>
+                </div>
+            </div>
+
+            <div class="login-card">
+                <div id="login-error" class="alert alert-error hidden"></div>
+
+                <div class="login-section">
+                    <h3>Viewer Access</h3>
+                    <form id="viewer-form">
+                        <div class="form-group">
+                            <label class="form-label" for="access-code">Access Code</label>
+                            <input type="password" id="access-code" class="form-input" placeholder="Enter access code">
+                        </div>
+                        <button type="submit" class="btn btn-secondary" style="width: 100%;">Enter as Viewer</button>
+                    </form>
+                </div>
+
+                <div class="login-divider">
+                    <span>or sign in as editor</span>
+                </div>
+
+                <div class="login-section">
+                    <form id="editor-form">
+                        <div class="form-group">
+                            <label class="form-label" for="username">Username</label>
+                            <input type="text" id="username" class="form-input" placeholder="AX, SPW, or Vieth">
+                        </div>
+                        <div class="form-group">
+                            <label class="form-label" for="password">Password</label>
+                            <input type="password" id="password" class="form-input">
+                        </div>
+                        <button type="submit" class="btn btn-primary" style="width: 100%;">Sign In as Editor</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Main App -->
+    <div id="app-page" class="page hidden">
+        <header class="app-header">
+            <div class="app-logo">
+                <div class="app-logo-line"></div>
+                <div class="app-logo-line"></div>
+                <div class="app-logo-line"></div>
+            </div>
+            <div class="app-branding">
+                <span class="app-title">IsisCB Projects</span>
+                <span class="app-project-name">Dissertations</span>
+            </div>
+            <div class="app-header-right">
+                <span id="user-display" class="text-muted"></span>
+                <button id="logout-btn" class="btn btn-ghost btn-sm">Logout</button>
+            </div>
+        </header>
+
+        <main class="app-main">
+            <!-- Search Section -->
+            <section class="search-section">
+                <div class="search-row">
+                    <div class="search-group">
+                        <label class="search-label">Name</label>
+                        <div class="search-input-row">
+                            <div class="search-container">
+                                <svg class="search-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <circle cx="11" cy="11" r="8"></circle>
+                                    <path d="M21 21l-4.35-4.35"></path>
+                                </svg>
+                                <input type="text" id="search-input" class="search-input" placeholder="Search by name...">
+                            </div>
+                            <select id="name-scope" class="form-select" style="width: auto;">
+                                <option value="all">Authors & Advisors</option>
+                                <option value="authors">Authors Only</option>
+                                <option value="advisors_committee">Advisors Only</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="search-group">
+                        <label class="search-label">School</label>
+                        <div class="autocomplete school-autocomplete">
+                            <input type="text" id="school-search" class="search-input autocomplete-input" placeholder="Search by school...">
+                            <div class="autocomplete-dropdown hidden"></div>
+                        </div>
+                    </div>
+                    <div class="search-group">
+                        <label class="search-label">Title</label>
+                        <input type="text" id="title-search" class="search-input" placeholder="Search by title...">
+                    </div>
+                </div>
+
+                <div class="filters-row">
+                    <div class="form-group" style="margin-bottom: 0;">
+                        <label class="form-label">Department</label>
+                        <select id="filter-department" class="form-select">
+                            <option value="">Any</option>
+                        </select>
+                    </div>
+                    <div class="form-group" style="margin-bottom: 0;">
+                        <label class="form-label">Subject</label>
+                        <select id="filter-subject" class="form-select">
+                            <option value="">Any</option>
+                        </select>
+                    </div>
+                    <div class="form-group" style="margin-bottom: 0;">
+                        <label class="form-label">Root Diss</label>
+                        <select id="filter-root" class="form-select">
+                            <option value="any">Any</option>
+                            <option value="yes">Yes</option>
+                            <option value="no">No</option>
+                        </select>
+                    </div>
+                    <div class="form-group" style="margin-bottom: 0;">
+                        <label class="form-label">Year</label>
+                        <div class="year-range">
+                            <input type="number" id="year-from" class="form-input" placeholder="From" min="1800" max="2030">
+                            <span>to</span>
+                            <input type="number" id="year-to" class="form-input" placeholder="To" min="1800" max="2030">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="actions-row">
+                    <button id="add-btn" class="btn btn-primary editor-only hidden">+ Add New Dissertation</button>
+                    <button id="clear-search-btn" class="btn btn-ghost">Clear</button>
+                    <div class="export-dropdown">
+                        <button id="export-btn" class="btn btn-secondary">Export CSV</button>
+                        <div id="export-menu" class="dropdown-menu hidden">
+                            <button id="export-results" class="dropdown-item">Export Search Results</button>
+                            <button id="export-all" class="dropdown-item">Export All Data</button>
+                        </div>
+                    </div>
+                    <span id="results-count" class="results-count text-muted"></span>
+                </div>
+            </section>
+
+            <!-- Results Table -->
+            <section class="results-section">
+                <div id="loading" class="loading hidden">
+                    <div class="spinner"></div>
+                </div>
+
+                <div id="empty-state" class="empty-state hidden">
+                    <div class="empty-state-icon">📚</div>
+                    <div class="empty-state-text">No dissertations found</div>
+                </div>
+
+                <div class="table-container">
+                    <table id="results-table" class="table hidden">
+                        <thead>
+                            <tr>
+                                <th style="width: 40px;"></th>
+                                <th class="sortable" data-sort="author_name">Author</th>
+                                <th class="sortable" data-sort="title">Title</th>
+                                <th class="sortable" data-sort="year" style="width: 80px;">Year</th>
+                                <th class="sortable" data-sort="school">School</th>
+                            </tr>
+                        </thead>
+                        <tbody id="results-body">
+                        </tbody>
+                    </table>
+                </div>
+
+                <div id="pagination" class="pagination hidden">
+                    <button id="prev-page" class="btn btn-secondary btn-sm">Prev</button>
+                    <span id="page-info" class="pagination-info"></span>
+                    <button id="next-page" class="btn btn-secondary btn-sm">Next</button>
+                </div>
+            </section>
+        </main>
+    </div>
+
+    <!-- Add/Edit Page -->
+    <div id="editor-page" class="page hidden">
+        <header class="app-header">
+            <div class="app-logo">
+                <div class="app-logo-line"></div>
+                <div class="app-logo-line"></div>
+                <div class="app-logo-line"></div>
+            </div>
+            <div class="app-branding">
+                <span class="app-title">IsisCB Projects</span>
+                <span class="app-project-name">Dissertations</span>
+            </div>
+            <div class="app-header-right">
+                <span id="editor-user-display" class="text-muted"></span>
+            </div>
+        </header>
+
+        <main class="app-main">
+            <div class="editor-header">
+                <h2 id="editor-title">Add New Dissertation</h2>
+                <div class="editor-actions">
+                    <button id="cancel-btn" class="btn btn-secondary">Cancel</button>
+                    <button id="save-btn" class="btn btn-primary">Save</button>
+                </div>
+            </div>
+
+            <div id="editor-error" class="alert alert-error hidden"></div>
+
+            <form id="dissertation-form" class="editor-form">
+                <!-- Author -->
+                <fieldset class="form-fieldset">
+                    <legend>Author</legend>
+
+                    <div class="form-group">
+                        <label class="form-label required" for="edit-author">Name</label>
+                        <div class="autocomplete" id="author-autocomplete">
+                            <input type="text" id="edit-author" class="autocomplete-input" required>
+                            <div class="autocomplete-dropdown hidden"></div>
+                        </div>
+                        <span class="form-hint">Search by name or authority ID</span>
+                        <input type="hidden" id="edit-author-id">
+                        <input type="hidden" id="edit-author-years">
+                        <div id="author-selected" class="selected-authority hidden"></div>
+                    </div>
+                </fieldset>
+
+                <!-- Dissertation Information -->
+                <fieldset class="form-fieldset">
+                    <legend>Dissertation Information</legend>
+
+                    <div class="form-group">
+                        <label class="form-label required" for="edit-title">Title</label>
+                        <input type="text" id="edit-title" class="form-input" required>
+                        <label class="form-checkbox mt-1">
+                            <input type="checkbox" id="title-unknown">
+                            Use [unknown]
+                        </label>
+                    </div>
+
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label class="form-label required" for="edit-year">Year</label>
+                            <input type="number" id="edit-year" class="form-input" min="1800" max="2030" required>
+                            <span class="form-hint">1800 to current year + 1</span>
+                        </div>
+                        <div class="form-group">
+                            <label class="form-label" for="edit-date-free-text">Date Notes</label>
+                            <input type="text" id="edit-date-free-text" class="form-input" placeholder="e.g., 1953 or 54">
+                            <span class="form-hint">For uncertain dates</span>
+                        </div>
+                        <div class="form-group">
+                            <label class="form-label" for="edit-degree-type">Degree Type</label>
+                            <select id="edit-degree-type" class="form-select">
+                                <option value="PhD">PhD</option>
+                                <option value="MD">MD</option>
+                                <option value="MLIS">MLIS</option>
+                                <option value="BPhil">BPhil</option>
+                                <option value="ScD">ScD</option>
+                                <option value="MA">MA</option>
+                                <option value="MS">MS</option>
+                                <option value="Other">Other</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label class="form-label required" for="edit-school">School</label>
+                        <div class="autocomplete" id="school-autocomplete">
+                            <input type="text" id="edit-school" class="autocomplete-input" required>
+                            <div class="autocomplete-dropdown hidden"></div>
+                        </div>
+                        <label class="form-checkbox mt-1">
+                            <input type="checkbox" id="school-unknown">
+                            Use [unknown]
+                        </label>
+                        <input type="hidden" id="edit-school-id">
+                        <div id="school-selected" class="selected-authority hidden"></div>
+                    </div>
+
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label class="form-label" for="edit-department-free">Department (free text)</label>
+                            <input type="text" id="edit-department-free" class="form-input">
+                        </div>
+                        <div class="form-group">
+                            <label class="form-label required" for="edit-department-broad">Department (category)</label>
+                            <select id="edit-department-broad" class="form-select" required></select>
+                        </div>
+                    </div>
+
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label class="form-label required" for="edit-subject-broad">Subject</label>
+                            <select id="edit-subject-broad" class="form-select" required></select>
+                        </div>
+                        <div class="form-group">
+                            <label class="form-label required">Root Dissertation</label>
+                            <div class="radio-group">
+                                <label class="form-checkbox">
+                                    <input type="radio" name="root-dissertation" value="Yes" required>
+                                    Yes
+                                </label>
+                                <label class="form-checkbox">
+                                    <input type="radio" name="root-dissertation" value="No" required>
+                                    No
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+                </fieldset>
+
+                <!-- Advisors & Committee -->
+                <fieldset class="form-fieldset">
+                    <legend>Advisors & Committee</legend>
+
+                    <div id="advisors-container">
+                        <!-- Advisor rows will be added dynamically -->
+                    </div>
+
+                    <button type="button" id="add-advisor-btn" class="btn btn-secondary btn-sm">+ Add Another Advisor</button>
+                </fieldset>
+
+                <!-- Metadata -->
+                <fieldset class="form-fieldset">
+                    <legend>Metadata</legend>
+
+                    <div class="form-group">
+                        <label class="form-label required" for="edit-source-notes">Source Notes</label>
+                        <textarea id="edit-source-notes" class="form-textarea" required></textarea>
+                    </div>
+
+                    <div class="form-group">
+                        <label class="form-label" for="edit-description">Description</label>
+                        <textarea id="edit-description" class="form-textarea"></textarea>
+                    </div>
+
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label class="form-label" for="edit-language">Language</label>
+                            <input type="text" id="edit-language" class="form-input" placeholder="e.g., en">
+                        </div>
+                        <div class="form-group">
+                            <label class="form-label" for="edit-pages">Pages</label>
+                            <input type="text" id="edit-pages" class="form-input">
+                        </div>
+                    </div>
+                </fieldset>
+            </form>
+
+            <div class="editor-footer">
+                <button id="cancel-btn-bottom" class="btn btn-secondary">Cancel</button>
+                <button id="save-btn-bottom" class="btn btn-primary">Save</button>
+            </div>
+        </main>
+    </div>
+
+    <!-- Delete Confirmation Modal -->
+    <div id="delete-modal" class="modal-overlay hidden">
+        <div class="modal">
+            <div class="modal-header">
+                <h3 class="modal-title">Delete Dissertation</h3>
+                <button class="modal-close" data-close>&times;</button>
+            </div>
+            <div class="modal-body">
+                <p>Are you sure you want to delete:</p>
+                <p id="delete-dissertation-info" class="text-muted"></p>
+                <div class="form-group mt-2">
+                    <label class="form-label required" for="delete-reason">Reason for deletion</label>
+                    <input type="text" id="delete-reason" class="form-input" required>
+                </div>
+                <p class="text-small text-muted">This action can be undone by an administrator.</p>
+            </div>
+            <div class="modal-footer">
+                <button class="btn btn-secondary" data-close>Cancel</button>
+                <button id="confirm-delete" class="btn btn-danger">Delete</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Duplicate Warning Modal -->
+    <div id="duplicate-modal" class="modal-overlay hidden">
+        <div class="modal">
+            <div class="modal-header">
+                <h3 class="modal-title">Existing Dissertation(s) Found</h3>
+                <button class="modal-close" data-close>&times;</button>
+            </div>
+            <div class="modal-body">
+                <p id="duplicate-author-name"></p>
+                <div id="duplicate-list"></div>
+                <p class="mt-2">Are you sure you want to add another dissertation for this person?</p>
+            </div>
+            <div class="modal-footer">
+                <button class="btn btn-secondary" data-close>Cancel</button>
+                <button id="confirm-duplicate" class="btn btn-primary">Yes, Add Another</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Change Log Modal -->
+    <div id="changelog-modal" class="modal-overlay hidden">
+        <div class="modal" style="max-width: 600px;">
+            <div class="modal-header">
+                <h3 class="modal-title">Change Log</h3>
+                <button class="modal-close" data-close>&times;</button>
+            </div>
+            <div class="modal-body">
+                <div id="changelog-content"></div>
+            </div>
+            <div class="modal-footer">
+                <button class="btn btn-secondary" data-close>Close</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Create Authority Modal -->
+    <div id="authority-modal" class="modal-overlay hidden">
+        <div class="modal">
+            <div class="modal-header">
+                <h3 class="modal-title" id="authority-modal-title">Create New Person Authority</h3>
+                <button class="modal-close" data-close>&times;</button>
+            </div>
+            <div class="modal-body">
+                <div class="form-group">
+                    <label class="form-label">Name</label>
+                    <input type="text" id="authority-name" class="form-input" readonly>
+                </div>
+                <div class="form-row">
+                    <div class="form-group">
+                        <label class="form-label" for="authority-birth">Birth Year</label>
+                        <input type="number" id="authority-birth" class="form-input" min="1400" max="2025">
+                    </div>
+                    <div class="form-group">
+                        <label class="form-label" for="authority-death">Death Year</label>
+                        <input type="number" id="authority-death" class="form-input" min="1400" max="2025">
+                    </div>
+                </div>
+                <p class="text-small text-muted">New ID will be generated automatically</p>
+            </div>
+            <div class="modal-footer">
+                <button class="btn btn-secondary" data-close>Cancel</button>
+                <button id="confirm-authority" class="btn btn-primary">Create Authority</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="scripts/config.js"></script>
+    <script src="scripts/api.js"></script>
+    <script src="scripts/auth.js"></script>
+    <script src="scripts/search.js"></script>
+    <script src="scripts/editor.js"></script>
+    <script src="scripts/app.js"></script>
+</body>
+</html>

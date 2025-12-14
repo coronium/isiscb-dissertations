@@ -1,0 +1,486 @@
+/* App-specific styles */
+
+/* Login Page */
+.login-container {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 2rem;
+    background: var(--sky-lighter);
+}
+
+.login-branding {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin-bottom: 2rem;
+}
+
+.app-logo-lg .app-logo-line:nth-child(1) { width: 36px; }
+.app-logo-lg .app-logo-line:nth-child(2) { width: 24px; }
+.app-logo-lg .app-logo-line:nth-child(3) { width: 42px; }
+
+.login-card {
+    background: white;
+    border-radius: 12px;
+    box-shadow: 0 4px 24px rgba(23, 55, 83, 0.1);
+    padding: 2rem;
+    width: 100%;
+    max-width: 400px;
+}
+
+.login-section h3 {
+    font-size: var(--text-base);
+    margin-bottom: 1rem;
+    color: var(--deep-space-blue);
+}
+
+.login-divider {
+    display: flex;
+    align-items: center;
+    margin: 1.5rem 0;
+    color: var(--charcoal-blue);
+    font-size: var(--text-sm);
+}
+
+.login-divider::before,
+.login-divider::after {
+    content: "";
+    flex: 1;
+    height: 1px;
+    background: var(--sky-light);
+}
+
+.login-divider span {
+    padding: 0 1rem;
+}
+
+/* Search Section */
+.search-section {
+    margin-bottom: 1.5rem;
+}
+
+.search-row {
+    display: flex;
+    gap: 1rem;
+    margin-bottom: 1rem;
+    flex-wrap: wrap;
+}
+
+.search-group {
+    display: flex;
+    flex-direction: column;
+    gap: 0.25rem;
+    flex: 1;
+    min-width: 200px;
+}
+
+.search-label {
+    font-size: var(--text-sm);
+    font-weight: 500;
+    color: var(--charcoal-blue);
+}
+
+.search-input-row {
+    display: flex;
+    gap: 0.5rem;
+}
+
+.search-input-row .search-container {
+    flex: 1;
+}
+
+.search-main {
+    flex: 1;
+    max-width: none;
+}
+
+.school-autocomplete {
+    position: relative;
+}
+
+.school-autocomplete .autocomplete-dropdown {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    z-index: 100;
+    background: white;
+    border: 1px solid var(--slate);
+    border-radius: 6px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    max-height: 300px;
+    overflow-y: auto;
+}
+
+.school-autocomplete .autocomplete-option {
+    padding: 0.5rem 0.75rem;
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.school-autocomplete .autocomplete-option:hover {
+    background: var(--sky-lighter);
+}
+
+.school-autocomplete .school-count {
+    font-size: var(--text-sm);
+    color: var(--charcoal-blue);
+}
+
+.filters-row {
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
+    margin-bottom: 1rem;
+}
+
+.filters-row .form-group {
+    min-width: 150px;
+}
+
+.year-range {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.year-range input {
+    width: 80px;
+}
+
+.actions-row {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.results-count {
+    margin-left: auto;
+    font-size: var(--text-sm);
+}
+
+/* Export Dropdown */
+.export-dropdown {
+    position: relative;
+}
+
+.dropdown-menu {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    margin-top: 4px;
+    background: white;
+    border: 1px solid var(--color-border);
+    border-radius: 6px;
+    box-shadow: 0 4px 12px rgba(23, 55, 83, 0.15);
+    z-index: 100;
+    min-width: 180px;
+}
+
+.dropdown-item {
+    display: block;
+    width: 100%;
+    padding: 0.5rem 1rem;
+    background: none;
+    border: none;
+    text-align: left;
+    font-family: inherit;
+    font-size: var(--text-sm);
+    cursor: pointer;
+}
+
+.dropdown-item:hover {
+    background: var(--sky-light);
+}
+
+/* Results Table Enhancements */
+.table tbody tr {
+    cursor: pointer;
+}
+
+.table .title-cell {
+    max-width: 300px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+/* Expanded Row Details */
+.expanded-row {
+    background: var(--sky-lighter);
+}
+
+.expanded-row td {
+    padding: 0 !important;
+}
+
+.expanded-content-inner {
+    padding: 1rem;
+    border-top: 1px solid var(--sky-light);
+}
+
+.expanded-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1rem;
+    margin-bottom: 1rem;
+}
+
+.expanded-field {
+    font-size: var(--text-sm);
+}
+
+.expanded-field-label {
+    font-size: var(--text-xs);
+    color: var(--charcoal-blue);
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    margin-bottom: 0.25rem;
+}
+
+.advisors-list {
+    margin-top: 1rem;
+}
+
+.advisors-list h4 {
+    font-size: var(--text-sm);
+    margin-bottom: 0.5rem;
+}
+
+.advisor-item {
+    font-size: var(--text-sm);
+    padding: 0.25rem 0;
+}
+
+.advisor-role {
+    color: var(--charcoal-blue);
+    font-size: var(--text-xs);
+}
+
+.expanded-actions {
+    margin-top: 1rem;
+    padding-top: 1rem;
+    border-top: 1px solid var(--sky-light);
+    display: flex;
+    gap: 0.5rem;
+}
+
+/* Editor Page */
+.editor-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1.5rem;
+}
+
+.editor-actions {
+    display: flex;
+    gap: 0.5rem;
+}
+
+.editor-form {
+    max-width: 800px;
+}
+
+.form-fieldset {
+    border: 1px solid var(--sky-light);
+    border-radius: 8px;
+    padding: 1.5rem;
+    margin-bottom: 1.5rem;
+}
+
+.form-fieldset legend {
+    font-weight: 600;
+    padding: 0 0.5rem;
+    color: var(--deep-space-blue);
+}
+
+.radio-group {
+    display: flex;
+    gap: 1.5rem;
+}
+
+/* Selected Authority Display */
+.selected-authority {
+    margin-top: 0.5rem;
+    padding: 0.5rem;
+    background: var(--sky-light);
+    border-radius: 4px;
+    font-size: var(--text-sm);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.selected-authority .authority-id {
+    font-family: var(--font-mono);
+    font-size: var(--text-xs);
+    color: var(--charcoal-blue);
+}
+
+.selected-authority .clear-btn {
+    background: none;
+    border: none;
+    cursor: pointer;
+    color: var(--charcoal-blue);
+    padding: 0.25rem;
+}
+
+/* Advisor Row */
+.advisor-row {
+    display: flex;
+    gap: 0.5rem;
+    margin-bottom: 1rem;
+    align-items: flex-start;
+}
+
+.advisor-row .autocomplete {
+    flex: 1;
+}
+
+.advisor-row .form-select {
+    width: 150px;
+}
+
+.advisor-row .remove-btn {
+    background: none;
+    border: none;
+    cursor: pointer;
+    color: var(--charcoal-blue);
+    padding: 0.5rem;
+    font-size: 1.25rem;
+}
+
+.advisor-row .remove-btn:hover {
+    color: var(--color-danger);
+}
+
+.editor-footer {
+    display: flex;
+    justify-content: flex-end;
+    gap: 0.5rem;
+    margin-top: 1.5rem;
+    padding-top: 1.5rem;
+    border-top: 1px solid var(--sky-light);
+}
+
+/* Change Log */
+.changelog-entry {
+    padding: 1rem;
+    border-bottom: 1px solid var(--sky-light);
+}
+
+.changelog-entry:last-child {
+    border-bottom: none;
+}
+
+.changelog-header {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 0.5rem;
+    font-size: var(--text-sm);
+}
+
+.changelog-time {
+    color: var(--charcoal-blue);
+}
+
+.changelog-editor {
+    font-weight: 500;
+}
+
+.changelog-changes {
+    font-size: var(--text-sm);
+}
+
+.changelog-field {
+    padding: 0.25rem 0;
+    padding-left: 1rem;
+    border-left: 2px solid var(--sky-light);
+    margin: 0.25rem 0;
+}
+
+.changelog-old {
+    text-decoration: line-through;
+    color: var(--charcoal-blue);
+}
+
+.changelog-new {
+    color: var(--blue-bell);
+}
+
+/* Clickable search links in expanded view */
+.search-link {
+    color: var(--blue-bell);
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.search-link:hover {
+    text-decoration: underline;
+    color: var(--deep-space-blue);
+}
+
+/* Linked authority IDs */
+.tag-link {
+    cursor: pointer;
+    text-decoration: none;
+}
+
+.tag-link:hover {
+    background: var(--sky-reflection);
+    color: white;
+}
+
+/* Page visibility */
+.page {
+    min-height: 100vh;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .search-row {
+        flex-direction: column;
+    }
+
+    .filters-row {
+        flex-direction: column;
+    }
+
+    .filters-row .form-group {
+        width: 100%;
+    }
+
+    .actions-row {
+        flex-wrap: wrap;
+    }
+
+    .results-count {
+        width: 100%;
+        margin-left: 0;
+        margin-top: 0.5rem;
+    }
+
+    .editor-header {
+        flex-direction: column;
+        gap: 1rem;
+        align-items: flex-start;
+    }
+
+    .form-row {
+        flex-direction: column;
+    }
+
+    .advisor-row {
+        flex-wrap: wrap;
+    }
+
+    .advisor-row .form-select {
+        width: 100%;
+    }
+}
