@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IsisCB Projects - Dissertations Explorer</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles/isiscb-base.css">
+    <link rel="stylesheet" href="styles/explorer.css">
+    <!-- noUiSlider for year range -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/nouislider@15/dist/nouislider.min.css">
+</head>
+<body>
+    <!-- Login Page -->
+    <div id="login-page" class="page">
+        <div class="login-container">
+            <div class="login-branding">
+                <div class="app-logo app-logo-lg">
+                    <div class="app-logo-line"></div>
+                    <div class="app-logo-line"></div>
+                    <div class="app-logo-line"></div>
+                </div>
+                <div class="app-branding">
+                    <span class="app-title">IsisCB Projects</span>
+                    <span class="app-project-name">Dissertations Explorer</span>
+                </div>
+            </div>
+
+            <div class="login-card">
+                <div id="login-error" class="alert alert-error hidden"></div>
+
+                <div class="login-section">
+                    <h3>Viewer Access</h3>
+                    <p class="text-muted text-small mb-2">Enter the access code to explore dissertation data visualizations.</p>
+                    <form id="viewer-form">
+                        <div class="form-group">
+                            <label class="form-label" for="access-code">Access Code</label>
+                            <input type="password" id="access-code" class="form-input" placeholder="Enter access code">
+                        </div>
+                        <button type="submit" class="btn btn-primary" style="width: 100%;">Enter Explorer</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Main App -->
+    <div id="app-page" class="page hidden">
+        <header class="app-header">
+            <div class="app-logo">
+                <div class="app-logo-line"></div>
+                <div class="app-logo-line"></div>
+                <div class="app-logo-line"></div>
+            </div>
+            <div class="app-branding">
+                <span class="app-title">IsisCB Projects</span>
+                <span class="app-project-name">Dissertations Explorer</span>
+            </div>
+            <div class="app-header-right">
+                <span id="user-display" class="text-muted"></span>
+                <button id="refresh-btn" class="btn btn-secondary btn-sm editor-only hidden" title="Refresh data snapshots">Refresh Data</button>
+                <button id="logout-btn" class="btn btn-ghost btn-sm">Logout</button>
+            </div>
+        </header>
+
+        <main class="app-main explorer-main">
+            <!-- Controls Section -->
+            <section class="controls-section">
+                <div class="controls-row">
+                    <div class="control-group">
+                        <label class="control-label">Time Granularity</label>
+                        <div class="btn-group" id="granularity-toggle">
+                            <button class="btn btn-sm" data-value="year">Year</button>
+                            <button class="btn btn-sm" data-value="5year">5-Year</button>
+                            <button class="btn btn-sm btn-active" data-value="decade">Decade</button>
+                        </div>
+                    </div>
+                    <div class="control-group year-range-control">
+                        <label class="control-label">Year Range: <span id="year-range-display">1878 - 2025</span></label>
+                        <div id="year-slider"></div>
+                    </div>
+                    <div class="control-group placeholder-control">
+                        <label class="control-label">Department</label>
+                        <select class="form-select" disabled title="Limited data coverage - coming soon">
+                            <option>Any (limited data)</option>
+                        </select>
+                    </div>
+                    <div class="control-group placeholder-control">
+                        <label class="control-label">Subject</label>
+                        <select class="form-select" disabled title="Limited data coverage - coming soon">
+                            <option>Any (limited data)</option>
+                        </select>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Loading State -->
+            <div id="loading" class="loading">
+                <div class="spinner"></div>
+                <p class="text-muted">Loading visualization data...</p>
+            </div>
+
+            <!-- Visualizations Container -->
+            <div id="visualizations" class="visualizations hidden">
+                <!-- Row 1: Timeline (full width) -->
+                <section class="viz-section viz-full">
+                    <div class="viz-header">
+                        <h2 class="viz-title">Dissertations Over Time</h2>
+                        <div class="viz-meta" id="timeline-meta"></div>
+                    </div>
+                    <div class="viz-container" id="timeline-chart"></div>
+                </section>
+
+                <!-- Row 2: School Comparison + Pareto -->
+                <div class="viz-row">
+                    <section class="viz-section">
+                        <div class="viz-header">
+                            <h2 class="viz-title">School Comparison</h2>
+                            <span class="viz-subtitle">Select up to 5 schools</span>
+                        </div>
+                        <div class="school-selector" id="school-selector">
+                            <input type="text" class="form-input" id="school-search" placeholder="Search schools...">
+                            <div class="school-list" id="school-list"></div>
+                            <div class="selected-schools" id="selected-schools"></div>
+                        </div>
+                        <div class="viz-container" id="school-comparison-chart"></div>
+                    </section>
+
+                    <section class="viz-section">
+                        <div class="viz-header">
+                            <h2 class="viz-title">School Distribution</h2>
+                            <span class="viz-subtitle">Pareto analysis</span>
+                        </div>
+                        <div class="viz-container" id="pareto-chart"></div>
+                    </section>
+                </div>
+
+                <!-- Row 3: Top Share Over Time -->
+                <section class="viz-section viz-full">
+                    <div class="viz-header">
+                        <h2 class="viz-title">Market Concentration Over Time</h2>
+                        <div class="btn-group btn-group-sm" id="topshare-toggle">
+                            <button class="btn btn-sm" data-value="5">Top 5</button>
+                            <button class="btn btn-sm btn-active" data-value="10">Top 10</button>
+                            <button class="btn btn-sm" data-value="15">Top 15</button>
+                            <button class="btn btn-sm" data-value="20">Top 20</button>
+                        </div>
+                    </div>
+                    <div class="viz-container" id="topshare-chart"></div>
+                </section>
+
+                <!-- Row 4: School Rank Over Time (Bump Chart) -->
+                <section class="viz-section viz-full">
+                    <div class="viz-header">
+                        <h2 class="viz-title">School Rankings Over Time</h2>
+                        <span class="viz-subtitle">Top 15 schools by 10-year rolling output</span>
+                    </div>
+                    <div class="viz-container bump-chart-container" id="bump-chart"></div>
+                </section>
+
+                <!-- Row 5: Streamgraph -->
+                <section class="viz-section viz-full">
+                    <div class="viz-header">
+                        <h2 class="viz-title">School Output Streams</h2>
+                        <span class="viz-subtitle">Relative contribution of top 15 schools</span>
+                    </div>
+                    <div class="viz-container streamgraph-container" id="streamgraph-chart"></div>
+                </section>
+
+                <!-- Row 6: Geographic Map -->
+                <section class="viz-section viz-full">
+                    <div class="viz-header">
+                        <h2 class="viz-title">Geographic Distribution</h2>
+                        <span class="viz-subtitle">Dissertation output across North America, 1950-2020</span>
+                    </div>
+                    <div class="viz-container geo-map-chart-container" id="geo-map-chart">
+                        <!-- Geographic map will be populated by JS -->
+                    </div>
+                </section>
+
+                <!-- Row 7: Racing Bar Chart -->
+                <section class="viz-section viz-full">
+                    <div class="viz-header">
+                        <h2 class="viz-title">Top Schools Race</h2>
+                        <span class="viz-subtitle">10-year running average, 1945-2020</span>
+                    </div>
+                    <div class="viz-container racing-chart-container" id="racing-bar-chart">
+                        <!-- Racing bar chart will be populated by JS -->
+                    </div>
+                </section>
+
+            </div>
+        </main>
+
+        <footer class="app-footer">
+            <div class="footer-content">
+                <span id="data-timestamp" class="text-muted text-small"></span>
+            </div>
+        </footer>
+    </div>
+
+    <!-- Refresh Confirmation Modal -->
+    <div id="refresh-modal" class="modal-overlay hidden">
+        <div class="modal">
+            <div class="modal-header">
+                <h3 class="modal-title">Refresh Data Snapshots</h3>
+                <button class="modal-close" data-close>&times;</button>
+            </div>
+            <div class="modal-body">
+                <p>This will regenerate all data snapshots from the current database.</p>
+                <p class="text-muted text-small">After refreshing, you'll need to commit and push the changes to deploy them.</p>
+            </div>
+            <div class="modal-footer">
+                <button class="btn btn-secondary" data-close>Cancel</button>
+                <button id="confirm-refresh" class="btn btn-primary">Refresh Now</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Scripts -->
+    <script src="https://d3js.org/d3.v7.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/topojson-client@3"></script>
+    <script src="https://cdn.jsdelivr.net/npm/nouislider@15/dist/nouislider.min.js"></script>
+    <script src="scripts/config.js"></script>
+    <script src="scripts/api.js"></script>
+    <script src="scripts/auth.js"></script>
+    <script src="scripts/state.js"></script>
+    <script src="scripts/utils/formatters.js"></script>
+    <script src="scripts/utils/dataTransforms.js"></script>
+    <script src="scripts/components/controls.js"></script>
+    <script src="scripts/components/schoolSelector.js"></script>
+    <script src="scripts/charts/timeline.js"></script>
+    <script src="scripts/charts/schoolComparison.js"></script>
+    <script src="scripts/charts/pareto.js"></script>
+    <script src="scripts/charts/topShare.js"></script>
+    <script src="scripts/charts/bumpChart.js"></script>
+    <script src="scripts/charts/streamgraph.js"></script>
+    <script src="scripts/data/schoolLocations.js"></script>
+    <script src="scripts/charts/geoMap.js"></script>
+    <script src="scripts/charts/racingBar.js"></script>
+    <script src="scripts/app.js"></script>
+</body>
+</html>

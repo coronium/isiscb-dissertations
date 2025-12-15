@@ -38,3 +38,20 @@ services:
       - type: rewrite
         source: /*
         destination: /index.html
+
+  # Explorer Static Site
+  - type: web
+    name: isiscb-dissertations-explorer
+    runtime: static
+    staticPublishPath: explorer
+    headers:
+      - path: /*
+        name: Cache-Control
+        value: public, max-age=3600
+      - path: /data/*
+        name: Cache-Control
+        value: no-cache
+    routes:
+      - type: rewrite
+        source: /*
+        destination: /index.html

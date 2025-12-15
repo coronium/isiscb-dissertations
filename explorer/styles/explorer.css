@@ -1,0 +1,623 @@
+/* Explorer-specific styles */
+
+/* Layout */
+.explorer-main {
+    padding: 1rem 2rem 2rem;
+    max-width: 1600px;
+    margin: 0 auto;
+}
+
+/* Controls Section */
+.controls-section {
+    background: var(--card-background);
+    border: 1px solid var(--border-color);
+    border-radius: var(--radius-lg);
+    padding: 1rem 1.5rem;
+    margin-bottom: 1.5rem;
+}
+
+.controls-row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+    align-items: flex-end;
+}
+
+.control-group {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.control-label {
+    font-size: 0.75rem;
+    font-weight: 500;
+    color: var(--text-muted);
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+}
+
+.year-range-control {
+    flex: 1;
+    min-width: 250px;
+    max-width: 400px;
+}
+
+#year-slider {
+    margin-top: 0.5rem;
+}
+
+.placeholder-control select {
+    opacity: 0.6;
+    cursor: not-allowed;
+}
+
+/* Button Group */
+.btn-group {
+    display: inline-flex;
+    border-radius: var(--radius);
+    overflow: hidden;
+    border: 1px solid var(--border-color);
+}
+
+.btn-group .btn {
+    border-radius: 0;
+    border: none;
+    border-right: 1px solid var(--border-color);
+}
+
+.btn-group .btn:last-child {
+    border-right: none;
+}
+
+.btn-group .btn-active {
+    background: var(--primary);
+    color: white;
+}
+
+.btn-group-sm .btn {
+    padding: 0.25rem 0.75rem;
+    font-size: 0.75rem;
+}
+
+/* Visualizations Grid */
+.visualizations {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.viz-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1.5rem;
+}
+
+.viz-section {
+    background: var(--card-background);
+    border: 1px solid var(--border-color);
+    border-radius: var(--radius-lg);
+    padding: 1.25rem;
+}
+
+.viz-full {
+    width: 100%;
+}
+
+.viz-header {
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+    margin-bottom: 1rem;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+}
+
+.viz-title {
+    font-size: 1rem;
+    font-weight: 600;
+    margin: 0;
+    color: var(--text-primary);
+}
+
+.viz-subtitle {
+    font-size: 0.75rem;
+    color: var(--text-muted);
+}
+
+.viz-meta {
+    font-size: 0.75rem;
+    color: var(--text-muted);
+}
+
+.viz-container {
+    position: relative;
+    min-height: 200px;
+}
+
+/* Charts */
+.axis text {
+    font-size: 11px;
+    fill: var(--text-muted);
+}
+
+.axis path,
+.axis line {
+    stroke: var(--border-color);
+}
+
+.axis-label {
+    font-size: 11px;
+    fill: var(--text-muted);
+}
+
+.hover-line {
+    stroke: var(--text-muted);
+    stroke-width: 1;
+}
+
+.chart-tooltip {
+    position: absolute;
+    background: var(--card-background);
+    border: 1px solid var(--border-color);
+    border-radius: var(--radius);
+    padding: 0.5rem 0.75rem;
+    font-size: 0.75rem;
+    pointer-events: none;
+    box-shadow: var(--shadow-md);
+    z-index: 100;
+    max-width: 200px;
+}
+
+.chart-empty,
+.chart-error {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 200px;
+    color: var(--text-muted);
+    text-align: center;
+    padding: 1rem;
+}
+
+.chart-error {
+    color: var(--error);
+}
+
+.legend-text {
+    font-size: 10px;
+    fill: var(--text-secondary);
+}
+
+.bar-label {
+    font-size: 14px;
+    font-weight: 600;
+    fill: var(--text-primary);
+}
+
+.bar-percentage {
+    font-size: 11px;
+}
+
+.bar-schools {
+    font-size: 10px;
+}
+
+.summary-text {
+    font-size: 12px;
+    font-weight: 500;
+}
+
+.reference-label {
+    font-size: 10px;
+}
+
+/* School Comparison Toggle */
+.comparison-toggle {
+    margin-bottom: 0.75rem;
+}
+
+/* School Selector */
+.school-selector {
+    margin-bottom: 1rem;
+}
+
+#school-search {
+    width: 100%;
+    margin-bottom: 0.5rem;
+}
+
+.school-list {
+    max-height: 200px;
+    overflow-y: auto;
+    border: 1px solid var(--border-color);
+    border-radius: var(--radius);
+    background: var(--background);
+}
+
+.school-item {
+    display: flex;
+    align-items: center;
+    padding: 0.5rem 0.75rem;
+    cursor: pointer;
+    transition: background 0.15s;
+}
+
+.school-item:hover {
+    background: var(--background-hover);
+}
+
+.school-item input {
+    margin-right: 0.5rem;
+}
+
+.school-item label {
+    display: flex;
+    justify-content: space-between;
+    flex: 1;
+    cursor: pointer;
+    font-size: 0.875rem;
+}
+
+.school-name {
+    color: var(--text-primary);
+}
+
+.school-count {
+    color: var(--text-muted);
+    font-size: 0.75rem;
+}
+
+.selected-schools {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    min-height: 2rem;
+    align-items: center;
+}
+
+.selected-school {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.25rem;
+    padding: 0.25rem 0.5rem;
+    background: var(--background);
+    border: 2px solid;
+    border-radius: var(--radius);
+    font-size: 0.75rem;
+}
+
+.school-color {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+}
+
+.remove-school {
+    background: none;
+    border: none;
+    color: var(--text-muted);
+    cursor: pointer;
+    padding: 0 0.25rem;
+    font-size: 1rem;
+    line-height: 1;
+}
+
+.remove-school:hover {
+    color: var(--error);
+}
+
+/* Statistics Panel */
+.stats-section {
+    min-width: 300px;
+}
+
+.stats-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1rem;
+}
+
+.stat-card {
+    text-align: center;
+    padding: 0.75rem;
+    background: var(--background);
+    border-radius: var(--radius);
+}
+
+.stat-value {
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: var(--text-primary);
+}
+
+.stat-value.positive {
+    color: var(--success);
+}
+
+.stat-value.negative {
+    color: var(--error);
+}
+
+.stat-label {
+    font-size: 0.7rem;
+    color: var(--text-muted);
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    margin-top: 0.25rem;
+}
+
+.stat-hint {
+    font-size: 0.65rem;
+    color: var(--text-muted);
+    margin-top: 0.25rem;
+}
+
+.stat-card-growth {
+    grid-column: span 1;
+}
+
+/* Placeholders */
+.placeholder-section {
+    opacity: 0.7;
+}
+
+.placeholder-content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 120px;
+    padding: 1.5rem;
+    background: var(--background);
+    border-radius: var(--radius);
+    text-align: center;
+}
+
+.badge {
+    display: inline-block;
+    padding: 0.2rem 0.5rem;
+    font-size: 0.65rem;
+    font-weight: 500;
+    border-radius: var(--radius-sm);
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+}
+
+.badge-muted {
+    background: var(--background-hover);
+    color: var(--text-muted);
+}
+
+/* Loading */
+.loading {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 4rem;
+    gap: 1rem;
+}
+
+.error-state {
+    text-align: center;
+}
+
+/* Footer */
+.app-footer {
+    padding: 1rem 2rem;
+    text-align: center;
+    border-top: 1px solid var(--border-color);
+    margin-top: 2rem;
+}
+
+/* noUiSlider customization */
+.noUi-target {
+    background: var(--background);
+    border: 1px solid var(--border-color);
+    border-radius: var(--radius);
+    box-shadow: none;
+    height: 8px;
+}
+
+.noUi-connect {
+    background: var(--primary);
+}
+
+.noUi-handle {
+    width: 18px;
+    height: 18px;
+    border-radius: 50%;
+    background: white;
+    border: 2px solid var(--primary);
+    box-shadow: var(--shadow-sm);
+    cursor: pointer;
+    top: -6px;
+    right: -9px;
+}
+
+.noUi-handle:before,
+.noUi-handle:after {
+    display: none;
+}
+
+.noUi-handle:focus {
+    outline: none;
+    box-shadow: 0 0 0 3px rgba(40, 146, 215, 0.3);
+}
+
+/* Responsive */
+@media (max-width: 1024px) {
+    .viz-row {
+        grid-template-columns: 1fr;
+    }
+
+    .stats-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 768px) {
+    .explorer-main {
+        padding: 1rem;
+    }
+
+    .controls-row {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .year-range-control {
+        max-width: none;
+    }
+
+    .stats-grid {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+@media (max-width: 480px) {
+    .stats-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* Racing Bar Chart */
+.racing-chart-container {
+    min-height: 500px;
+}
+
+.racing-controls {
+    margin-bottom: 1.5rem;
+    padding: 1rem;
+    background: var(--background);
+    border-radius: var(--radius);
+}
+
+.racing-controls-row {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    flex-wrap: wrap;
+}
+
+.speed-control {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    margin-left: 1rem;
+}
+
+.speed-control .control-label {
+    margin: 0;
+    font-size: 0.75rem;
+}
+
+.racing-year-display {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: var(--primary);
+    margin-left: auto;
+    font-variant-numeric: tabular-nums;
+    min-width: 100px;
+    text-align: right;
+}
+
+#racing-speed-slider {
+    width: 150px;
+    height: 8px;
+    cursor: pointer;
+    accent-color: var(--primary);
+    -webkit-appearance: auto;
+    appearance: auto;
+}
+
+.racing-bar-svg-container {
+    width: 100%;
+    overflow-x: auto;
+}
+
+.racing-bar-svg-container svg {
+    display: block;
+}
+
+.bar-group .bar {
+    transition: width 0.3s ease;
+}
+
+.bar-group .bar-label {
+    fill: white;
+    font-weight: 500;
+    text-shadow: 0 1px 2px rgba(0,0,0,0.3);
+}
+
+.bar-group .bar-value {
+    font-weight: 600;
+    fill: var(--text-primary);
+}
+
+.play-icon, .pause-icon {
+    margin-right: 0.25rem;
+}
+
+/* Racing chart axis */
+.axis-group text {
+    font-size: 11px;
+    fill: var(--text-muted);
+}
+
+.axis-group path,
+.axis-group line {
+    stroke: var(--border-color);
+}
+
+/* Bump Chart */
+.bump-chart-container {
+    min-height: 450px;
+}
+
+/* Streamgraph */
+.streamgraph-container {
+    min-height: 400px;
+}
+
+.stream {
+    transition: fill-opacity 0.2s ease;
+}
+
+/* Focus line for tooltips */
+.focus-line {
+    pointer-events: none;
+}
+
+/* Geographic Map */
+.geo-map-chart-container {
+    min-height: 600px;
+}
+
+.geo-controls {
+    margin-bottom: 1rem;
+    padding: 1rem;
+    background: var(--background);
+    border-radius: var(--radius);
+}
+
+.geo-map-container {
+    width: 100%;
+    min-height: 500px;
+    background: #f0f4f8;
+    border-radius: var(--radius);
+    overflow: hidden;
+}
+
+.school-bubble {
+    cursor: pointer;
+    transition: transform 0.1s ease;
+}
+
+.school-bubble:hover {
+    transform: scale(1.1);
+}
+
+.school-bubble circle {
+    transition: r 0.3s ease, fill-opacity 0.2s ease;
+}

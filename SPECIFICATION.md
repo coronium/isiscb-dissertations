@@ -4,8 +4,9 @@
 
 A web application for searching, viewing, adding, editing, and managing History of Science dissertation records. This system will become the authoritative source for dissertation data, replacing the current Google Sheets workflow.
 
-**Repository:** `isiscb-dissertations`
-**Deployment:** Render.com (API + Static Frontend)
+**Repository:** https://github.com/coronium/isiscb-dissertations
+**Frontend:** https://isiscb-dissertations.onrender.com
+**API:** https://isiscb-dissertations-api.onrender.com
 **Database:** Supabase PostgreSQL (https://guswnhmbvgnspsdhsqby.supabase.co)
 
 ---
@@ -15,16 +16,21 @@ A web application for searching, viewing, adding, editing, and managing History 
 ### Completed
 - ✅ Database schema deployed to Supabase
 - ✅ 9,813 dissertation records imported
-- ✅ API implemented (auth, dissertations, authorities, export routes)
-- ✅ Frontend implemented (login, search/list, editor forms)
+- ✅ API deployed to Render (auth, dissertations, authorities, export routes)
+- ✅ Frontend deployed to Render (login, search/list, editor forms)
 - ✅ Viewer authentication working
+- ✅ Search by name (authors/advisors), school (autocomplete), title
+- ✅ PostgreSQL RPC functions for JSONB advisor search
+- ✅ Clickable names/schools in detail view trigger searches
+- ✅ CBA authority IDs link to IsisCB (data.isiscb.org)
+- ✅ Soft delete with audit logging
 
 ### Pending
 - ⏳ Editor authentication testing
 - ⏳ Full CRUD testing
 - ⏳ Unit tests
-- ⏳ Deployment to Render
 - ⏳ Authority data import (CBA persons/institutions)
+- ⏳ UI to view/restore deleted records
 
 ### Changes from Original Spec
 1. **Database constraints relaxed** - Removed NOT NULL from: `title`, `author_name`, `subject_broad`, `root_dissertation`, `source_notes` to allow legacy data import

@@ -1,0 +1,3257 @@
+{
+  "schools": [
+    {
+      "name": "Harvard University",
+      "count": 479,
+      "min_year": 1924,
+      "max_year": 2024
+    },
+    {
+      "name": "University of Pennsylvania",
+      "count": 308,
+      "min_year": 1924,
+      "max_year": 2023
+    },
+    {
+      "name": "Princeton University",
+      "count": 296,
+      "min_year": 1948,
+      "max_year": 2023
+    },
+    {
+      "name": "University of Wisconsin, Madison",
+      "count": 289,
+      "min_year": 1907,
+      "max_year": 2024
+    },
+    {
+      "name": "Columbia University",
+      "count": 258,
+      "min_year": 1905,
+      "max_year": 2024
+    },
+    {
+      "name": "Yale University",
+      "count": 257,
+      "min_year": 1922,
+      "max_year": 2024
+    },
+    {
+      "name": "University of Toronto",
+      "count": 254,
+      "min_year": 1969,
+      "max_year": 2024
+    },
+    {
+      "name": "University of California, Berkeley",
+      "count": 234,
+      "min_year": 1932,
+      "max_year": 2023
+    },
+    {
+      "name": "University of Chicago",
+      "count": 223,
+      "min_year": 1929,
+      "max_year": 2024
+    },
+    {
+      "name": "University of California, Los Angeles",
+      "count": 206,
+      "min_year": 1947,
+      "max_year": 2023
+    },
+    {
+      "name": "Indiana University",
+      "count": 189,
+      "min_year": 1957,
+      "max_year": 2024
+    },
+    {
+      "name": "Johns Hopkins University",
+      "count": 186,
+      "min_year": 1890,
+      "max_year": 2021
+    },
+    {
+      "name": "Stanford University",
+      "count": 183,
+      "min_year": 1928,
+      "max_year": 2023
+    },
+    {
+      "name": "University of Michigan",
+      "count": 171,
+      "min_year": 1934,
+      "max_year": 2023
+    },
+    {
+      "name": "New York University",
+      "count": 162,
+      "min_year": 1959,
+      "max_year": 2023
+    },
+    {
+      "name": "Cornell University",
+      "count": 158,
+      "min_year": 1926,
+      "max_year": 2024
+    },
+    {
+      "name": "University of Minnesota",
+      "count": 153,
+      "min_year": 1952,
+      "max_year": 2021
+    },
+    {
+      "name": "University of North Carolina at Chapel Hill",
+      "count": 148,
+      "min_year": 1952,
+      "max_year": 2024
+    },
+    {
+      "name": "University of Pittsburgh",
+      "count": 143,
+      "min_year": 1952,
+      "max_year": 2021
+    },
+    {
+      "name": "University of California, San Diego",
+      "count": 134,
+      "min_year": 1976,
+      "max_year": 2024
+    },
+    {
+      "name": "University of Illinois at Urbana-Champaign",
+      "count": 132,
+      "min_year": 1943,
+      "max_year": 2021
+    },
+    {
+      "name": "University of Texas, Austin",
+      "count": 130,
+      "min_year": 1950,
+      "max_year": 2022
+    },
+    {
+      "name": "Rutgers University",
+      "count": 117,
+      "min_year": 1968,
+      "max_year": 2024
+    },
+    {
+      "name": "New York, City University of",
+      "count": 113,
+      "min_year": 1973,
+      "max_year": 2024
+    },
+    {
+      "name": "Duke University",
+      "count": 111,
+      "min_year": 1957,
+      "max_year": 2024
+    },
+    {
+      "name": "University of California, Santa Barbara",
+      "count": 110,
+      "min_year": 1964,
+      "max_year": 2023
+    },
+    {
+      "name": "University of Washington",
+      "count": 109,
+      "min_year": 1958,
+      "max_year": 2024
+    },
+    {
+      "name": "University of California, Davis",
+      "count": 104,
+      "min_year": 1973,
+      "max_year": 2024
+    },
+    {
+      "name": "University of Cambridge (UK)",
+      "count": 97,
+      "min_year": 1933,
+      "max_year": 2023
+    },
+    {
+      "name": "Massachusetts Institute of Technology",
+      "count": 95,
+      "min_year": 1926,
+      "max_year": 2023
+    },
+    {
+      "name": "University of Oxford (UK)",
+      "count": 93,
+      "min_year": 1923,
+      "max_year": 2012
+    },
+    {
+      "name": "University of Notre Dame",
+      "count": 90,
+      "min_year": 1956,
+      "max_year": 2021
+    },
+    {
+      "name": "Northwestern University",
+      "count": 89,
+      "min_year": 1952,
+      "max_year": 2023
+    },
+    {
+      "name": "Arizona State University",
+      "count": 84,
+      "min_year": 1975,
+      "max_year": 2023
+    },
+    {
+      "name": "University of Iowa",
+      "count": 83,
+      "min_year": 1937,
+      "max_year": 2024
+    },
+    {
+      "name": "University of Maryland, College Park",
+      "count": 83,
+      "min_year": 1952,
+      "max_year": 2024
+    },
+    {
+      "name": "University of California, Irvine",
+      "count": 77,
+      "min_year": 1971,
+      "max_year": 2024
+    },
+    {
+      "name": "University of Oklahoma",
+      "count": 73,
+      "min_year": 1953,
+      "max_year": 2023
+    },
+    {
+      "name": "Boston University",
+      "count": 73,
+      "min_year": 1953,
+      "max_year": 2022
+    },
+    {
+      "name": "Pennsylvania State University",
+      "count": 70,
+      "min_year": 1963,
+      "max_year": 2024
+    },
+    {
+      "name": "University of Virginia",
+      "count": 70,
+      "min_year": 1953,
+      "max_year": 2021
+    },
+    {
+      "name": "Emory University",
+      "count": 68,
+      "min_year": 1966,
+      "max_year": 2023
+    },
+    {
+      "name": "State University of New York at Stony Brook",
+      "count": 65,
+      "min_year": 1975,
+      "max_year": 2023
+    },
+    {
+      "name": "University of Southern California",
+      "count": 65,
+      "min_year": 1962,
+      "max_year": 2023
+    },
+    {
+      "name": "Temple University",
+      "count": 64,
+      "min_year": 1977,
+      "max_year": 2024
+    },
+    {
+      "name": "Brown University",
+      "count": 60,
+      "min_year": 1957,
+      "max_year": 2009
+    },
+    {
+      "name": "University of Delaware",
+      "count": 59,
+      "min_year": 1971,
+      "max_year": 2023
+    },
+    {
+      "name": "York University (Canada)",
+      "count": 58,
+      "min_year": 1972,
+      "max_year": 2013
+    },
+    {
+      "name": "Florida State University",
+      "count": 56,
+      "min_year": 1979,
+      "max_year": 2024
+    },
+    {
+      "name": "State University of New York, Buffalo",
+      "count": 56,
+      "min_year": 1969,
+      "max_year": 2023
+    },
+    {
+      "name": "George Washington University",
+      "count": 54,
+      "min_year": 1967,
+      "max_year": 2023
+    },
+    {
+      "name": "University College London (UK)",
+      "count": 53,
+      "min_year": 1959,
+      "max_year": 1964
+    },
+    {
+      "name": "Ohio State University",
+      "count": 51,
+      "min_year": 1974,
+      "max_year": 2010
+    },
+    {
+      "name": "University of California, Santa Cruz",
+      "count": 51,
+      "min_year": 1976,
+      "max_year": 2023
+    },
+    {
+      "name": "University of Manchester (UK)",
+      "count": 47,
+      "min_year": 1987,
+      "max_year": 2021
+    },
+    {
+      "name": "Brandeis University",
+      "count": 44,
+      "min_year": 1968,
+      "max_year": 2023
+    },
+    {
+      "name": "University of Kansas",
+      "count": 35,
+      "min_year": 1952,
+      "max_year": 2023
+    },
+    {
+      "name": "Catholic University of America",
+      "count": 34,
+      "min_year": 1976,
+      "max_year": 2020
+    },
+    {
+      "name": "McGill University (Canada)",
+      "count": 34,
+      "min_year": 1950,
+      "max_year": 2022
+    },
+    {
+      "name": "Open University (UK)",
+      "count": 34,
+      "min_year": 1988,
+      "max_year": 2010
+    },
+    {
+      "name": "Case Western Reserve University",
+      "count": 33,
+      "min_year": 1965,
+      "max_year": 2023
+    },
+    {
+      "name": "University of Western Ontario (Canada)",
+      "count": 33,
+      "min_year": 1944,
+      "max_year": 2010
+    },
+    {
+      "name": "University of Colorado, Boulder",
+      "count": 33,
+      "min_year": 1974,
+      "max_year": 2018
+    },
+    {
+      "name": "Michigan State University",
+      "count": 32,
+      "min_year": 1974,
+      "max_year": 2022
+    },
+    {
+      "name": "Boston College",
+      "count": 31,
+      "min_year": 1978,
+      "max_year": 2012
+    },
+    {
+      "name": "University of California, San Francisco",
+      "count": 28,
+      "min_year": 1930,
+      "max_year": 2023
+    },
+    {
+      "name": "Vanderbilt University",
+      "count": 28,
+      "min_year": 1974,
+      "max_year": 2023
+    },
+    {
+      "name": "Virginia Polytechnic Institute",
+      "count": 28,
+      "min_year": 1992,
+      "max_year": 2013
+    },
+    {
+      "name": "Cincinnati, University of",
+      "count": 27,
+      "min_year": 1975,
+      "max_year": 2022
+    },
+    {
+      "name": "Fordham University",
+      "count": 27,
+      "min_year": 1971,
+      "max_year": 2014
+    },
+    {
+      "name": "University of Massachusetts Amherst",
+      "count": 27,
+      "min_year": 1974,
+      "max_year": 2018
+    },
+    {
+      "name": "Iowa State University",
+      "count": 27,
+      "min_year": 1946,
+      "max_year": 2019
+    },
+    {
+      "name": "University of Arizona",
+      "count": 26,
+      "min_year": 1975,
+      "max_year": 2023
+    },
+    {
+      "name": "University of Oregon",
+      "count": 25,
+      "min_year": 1974,
+      "max_year": 2023
+    },
+    {
+      "name": "University of Leeds (UK)",
+      "count": 25,
+      "min_year": 2010,
+      "max_year": 2019
+    },
+    {
+      "name": "University of New Mexico",
+      "count": 25,
+      "min_year": 1974,
+      "max_year": 2016
+    },
+    {
+      "name": "Drew University",
+      "count": 25,
+      "min_year": 1986,
+      "max_year": 2022
+    },
+    {
+      "name": "University of South Carolina",
+      "count": 24,
+      "min_year": 1985,
+      "max_year": 2022
+    },
+    {
+      "name": "Southern Illinois University at Carbondale",
+      "count": 23,
+      "min_year": 1975,
+      "max_year": 2020
+    },
+    {
+      "name": "University of California, Riverside",
+      "count": 23,
+      "min_year": 1976,
+      "max_year": 2023
+    },
+    {
+      "name": "University of Rochester",
+      "count": 22,
+      "min_year": 1978,
+      "max_year": 2023
+    },
+    {
+      "name": "University of Illinois, Chicago",
+      "count": 22,
+      "min_year": 1979,
+      "max_year": 2018
+    },
+    {
+      "name": "Purdue University (Lafayette, Indiana)",
+      "count": 22,
+      "min_year": 1975,
+      "max_year": 2018
+    },
+    {
+      "name": "University of Edinburgh (UK)",
+      "count": 22,
+      "min_year": 1920,
+      "max_year": 2012
+    },
+    {
+      "name": "University of Missouri-Columbia",
+      "count": 22,
+      "min_year": 1974,
+      "max_year": 2004
+    },
+    {
+      "name": "Imperial College London (UK)",
+      "count": 22,
+      "min_year": 1948,
+      "max_year": 1948
+    },
+    {
+      "name": "University of Florida",
+      "count": 21,
+      "min_year": 1974,
+      "max_year": 2014
+    },
+    {
+      "name": "Syracuse University",
+      "count": 21,
+      "min_year": 1975,
+      "max_year": 2019
+    },
+    {
+      "name": "Texas A&M University",
+      "count": 20,
+      "min_year": 1980,
+      "max_year": 2023
+    },
+    {
+      "name": "Carnegie Mellon University",
+      "count": 20,
+      "min_year": 1981,
+      "max_year": 2017
+    },
+    {
+      "name": "London School of Economics (UK)",
+      "count": 20,
+      "min_year": 1955,
+      "max_year": 1956
+    },
+    {
+      "name": "University of Maryland",
+      "count": 20,
+      "min_year": 1974,
+      "max_year": 1986
+    },
+    {
+      "name": "University of Connecticut",
+      "count": 20,
+      "min_year": 1977,
+      "max_year": 2010
+    },
+    {
+      "name": "University of Lancaster (UK)",
+      "count": 19,
+      "min_year": 1988,
+      "max_year": 2002
+    },
+    {
+      "name": "Oregon State University",
+      "count": 19,
+      "min_year": 1975,
+      "max_year": 2009
+    },
+    {
+      "name": "Washington State University",
+      "count": 19,
+      "min_year": 1977,
+      "max_year": 2008
+    },
+    {
+      "name": "Georgetown University",
+      "count": 19,
+      "min_year": 1975,
+      "max_year": 2020
+    },
+    {
+      "name": "Rice University",
+      "count": 18,
+      "min_year": 1978,
+      "max_year": 2009
+    },
+    {
+      "name": "Kentucky, University of",
+      "count": 18,
+      "min_year": 1974,
+      "max_year": 2008
+    },
+    {
+      "name": "Duquesne University",
+      "count": 18,
+      "min_year": 1978,
+      "max_year": 2014
+    },
+    {
+      "name": "American University",
+      "count": 17,
+      "min_year": 1978,
+      "max_year": 2016
+    },
+    {
+      "name": "McMaster University (Canada)",
+      "count": 17,
+      "min_year": 1976,
+      "max_year": 2011
+    },
+    {
+      "name": "Rensselaer Polytechnic Institute",
+      "count": 16,
+      "min_year": 1981,
+      "max_year": 2023
+    },
+    {
+      "name": "Washington University",
+      "count": 16,
+      "min_year": 1975,
+      "max_year": 2004
+    },
+    {
+      "name": "Saint Louis University",
+      "count": 16,
+      "min_year": 1954,
+      "max_year": 2022
+    },
+    {
+      "name": "Queen's University at Kingston (Canada)",
+      "count": 16,
+      "min_year": 1981,
+      "max_year": 2006
+    },
+    {
+      "name": "Tulane University",
+      "count": 16,
+      "min_year": 1978,
+      "max_year": 2023
+    },
+    {
+      "name": "State University of New York at Binghamton",
+      "count": 16,
+      "min_year": 1986,
+      "max_year": 2021
+    },
+    {
+      "name": "University of New South Wales (Australia)",
+      "count": 16,
+      "min_year": 1974,
+      "max_year": 2016
+    },
+    {
+      "name": "University of Leicester (UK)",
+      "count": 15,
+      "min_year": null,
+      "max_year": null
+    },
+    {
+      "name": "University of Essex (UK)",
+      "count": 15,
+      "min_year": 1989,
+      "max_year": 2006
+    },
+    {
+      "name": "University of Alberta (Canada)",
+      "count": 15,
+      "min_year": 1993,
+      "max_year": 2013
+    },
+    {
+      "name": "Claremont Graduate University",
+      "count": 15,
+      "min_year": 1962,
+      "max_year": 2020
+    },
+    {
+      "name": "University of Tennessee",
+      "count": 15,
+      "min_year": 1976,
+      "max_year": 2007
+    },
+    {
+      "name": "Teachers College, Columbia University",
+      "count": 14,
+      "min_year": 1978,
+      "max_year": 2011
+    },
+    {
+      "name": "Warburg Institute, University of London (UK)",
+      "count": 14,
+      "min_year": null,
+      "max_year": null
+    },
+    {
+      "name": "University of Ottawa (Canada)",
+      "count": 14,
+      "min_year": 1992,
+      "max_year": 2004
+    },
+    {
+      "name": "University of London (UK)",
+      "count": 14,
+      "min_year": 1939,
+      "max_year": 1981
+    },
+    {
+      "name": "New School for Social Research",
+      "count": 14,
+      "min_year": 1977,
+      "max_year": 2002
+    },
+    {
+      "name": "Loyola University of Chicago",
+      "count": 13,
+      "min_year": 1978,
+      "max_year": 2010
+    },
+    {
+      "name": "Bryn Mawr College",
+      "count": 13,
+      "min_year": 1948,
+      "max_year": 2016
+    },
+    {
+      "name": "University of New Hampshire",
+      "count": 13,
+      "min_year": 1976,
+      "max_year": 2018
+    },
+    {
+      "name": "Miami University",
+      "count": 13,
+      "min_year": 1958,
+      "max_year": 2018
+    },
+    {
+      "name": "State University of New York at Albany",
+      "count": 12,
+      "min_year": 1975,
+      "max_year": 2020
+    },
+    {
+      "name": "Georgia Institute of Technology",
+      "count": 12,
+      "min_year": 1995,
+      "max_year": 2012
+    },
+    {
+      "name": "Auburn University",
+      "count": 11,
+      "min_year": 1976,
+      "max_year": 2010
+    },
+    {
+      "name": "University of British Columbia",
+      "count": 11,
+      "min_year": 1979,
+      "max_year": 2005
+    },
+    {
+      "name": "Carleton University (Canada)",
+      "count": 11,
+      "min_year": 1976,
+      "max_year": 2013
+    },
+    {
+      "name": "University of Durham (United Kingdom)",
+      "count": 11,
+      "min_year": 2010,
+      "max_year": 2014
+    },
+    {
+      "name": "University of Kent (UK)",
+      "count": 11,
+      "min_year": 1988,
+      "max_year": 1990
+    },
+    {
+      "name": "University of Texas at Dallas",
+      "count": 10,
+      "min_year": 1985,
+      "max_year": 2011
+    },
+    {
+      "name": "Louisiana State University",
+      "count": 10,
+      "min_year": 1978,
+      "max_year": 2007
+    },
+    {
+      "name": "Freie Universität Berlin",
+      "count": 10,
+      "min_year": 1965,
+      "max_year": 1996
+    },
+    {
+      "name": "University of Wisconsin, Milwaukee",
+      "count": 10,
+      "min_year": 1977,
+      "max_year": 2019
+    },
+    {
+      "name": "University of Nebraska - Lincoln",
+      "count": 10,
+      "min_year": 1989,
+      "max_year": 2013
+    },
+    {
+      "name": "Lehigh University",
+      "count": 10,
+      "min_year": 1982,
+      "max_year": 2005
+    },
+    {
+      "name": "Washington University in St. Louis",
+      "count": 9,
+      "min_year": 1955,
+      "max_year": 2025
+    },
+    {
+      "name": "Bowling Green State University",
+      "count": 9,
+      "min_year": 1987,
+      "max_year": 2019
+    },
+    {
+      "name": "West Virginia University",
+      "count": 9,
+      "min_year": 1978,
+      "max_year": 2014
+    },
+    {
+      "name": "University of South Florida",
+      "count": 9,
+      "min_year": 1979,
+      "max_year": 2019
+    },
+    {
+      "name": "College of William and Mary",
+      "count": 9,
+      "min_year": 1994,
+      "max_year": 2023
+    },
+    {
+      "name": "Marquette University",
+      "count": 9,
+      "min_year": 1984,
+      "max_year": 2016
+    },
+    {
+      "name": "University of Georgia",
+      "count": 8,
+      "min_year": 1974,
+      "max_year": 2001
+    },
+    {
+      "name": "Chelsea College, University of London (UK)",
+      "count": 8,
+      "min_year": null,
+      "max_year": null
+    },
+    {
+      "name": "Wayne State University",
+      "count": 8,
+      "min_year": 1964,
+      "max_year": 2022
+    },
+    {
+      "name": "Ohio University",
+      "count": 8,
+      "min_year": 1981,
+      "max_year": 2018
+    },
+    {
+      "name": "Texas Tech University",
+      "count": 8,
+      "min_year": 1990,
+      "max_year": 2002
+    },
+    {
+      "name": "Tufts University",
+      "count": 8,
+      "min_year": 1974,
+      "max_year": 2024
+    },
+    {
+      "name": "University of Utah",
+      "count": 8,
+      "min_year": 1987,
+      "max_year": 2015
+    },
+    {
+      "name": "University of Hawaii",
+      "count": 8,
+      "min_year": 1980,
+      "max_year": 2004
+    },
+    {
+      "name": "Oklahoma State University",
+      "count": 8,
+      "min_year": 1979,
+      "max_year": 2015
+    },
+    {
+      "name": "University of Waterloo (Canada)",
+      "count": 8,
+      "min_year": 1975,
+      "max_year": 2003
+    },
+    {
+      "name": "University of Texas Graduate School of Biomedical Sciences at Galveston",
+      "count": 7,
+      "min_year": 1992,
+      "max_year": 2006
+    },
+    {
+      "name": "University of Glasgow (UK)",
+      "count": 7,
+      "min_year": 1923,
+      "max_year": 2019
+    },
+    {
+      "name": "Georgia State University",
+      "count": 7,
+      "min_year": 1978,
+      "max_year": 2008
+    },
+    {
+      "name": "University of Bath (UK)",
+      "count": 7,
+      "min_year": 2006,
+      "max_year": 2006
+    },
+    {
+      "name": "New School University",
+      "count": 7,
+      "min_year": 2005,
+      "max_year": 2012
+    },
+    {
+      "name": "Kent State University",
+      "count": 7,
+      "min_year": 1976,
+      "max_year": 2015
+    },
+    {
+      "name": "University of Miami",
+      "count": 7,
+      "min_year": 1987,
+      "max_year": 2007
+    },
+    {
+      "name": "University of Manitoba (Canada)",
+      "count": 7,
+      "min_year": 1986,
+      "max_year": 2002
+    },
+    {
+      "name": "University of Montreal",
+      "count": 7,
+      "min_year": 1995,
+      "max_year": 1998
+    },
+    {
+      "name": "California Institute of Integral Studies",
+      "count": 7,
+      "min_year": 2003,
+      "max_year": 2015
+    },
+    {
+      "name": "Universität Zürich",
+      "count": 6,
+      "min_year": 1947,
+      "max_year": 1990
+    },
+    {
+      "name": "Northeastern University",
+      "count": 6,
+      "min_year": 2001,
+      "max_year": 2022
+    },
+    {
+      "name": "Chinese University of Hong Kong",
+      "count": 6,
+      "min_year": 2010,
+      "max_year": 2017
+    },
+    {
+      "name": "University of Maine",
+      "count": 6,
+      "min_year": 1975,
+      "max_year": 2013
+    },
+    {
+      "name": "Clark University",
+      "count": 6,
+      "min_year": 1970,
+      "max_year": 2022
+    },
+    {
+      "name": "Union Institute",
+      "count": 6,
+      "min_year": 1993,
+      "max_year": 2000
+    },
+    {
+      "name": "University of North Texas",
+      "count": 6,
+      "min_year": 1992,
+      "max_year": 2023
+    },
+    {
+      "name": "Carlos Albizu University",
+      "count": 6,
+      "min_year": 2000,
+      "max_year": 2002
+    },
+    {
+      "name": "George Mason University",
+      "count": 6,
+      "min_year": 2001,
+      "max_year": 2014
+    },
+    {
+      "name": "Union Institute and University",
+      "count": 6,
+      "min_year": 2002,
+      "max_year": 2012
+    },
+    {
+      "name": "Western Michigan University",
+      "count": 6,
+      "min_year": 1998,
+      "max_year": 2017
+    },
+    {
+      "name": "Graduate Theological Union",
+      "count": 6,
+      "min_year": 1983,
+      "max_year": 2011
+    },
+    {
+      "name": "Sheffield University (UK)",
+      "count": 6,
+      "min_year": null,
+      "max_year": null
+    },
+    {
+      "name": "Pacifica Graduate Institute",
+      "count": 6,
+      "min_year": 2001,
+      "max_year": 2015
+    },
+    {
+      "name": "University of Houston",
+      "count": 6,
+      "min_year": 1978,
+      "max_year": 2016
+    },
+    {
+      "name": "University of Louisville",
+      "count": 6,
+      "min_year": 1976,
+      "max_year": 2009
+    },
+    {
+      "name": "University of Southampton (United Kingdom)",
+      "count": 6,
+      "min_year": 2003,
+      "max_year": 2015
+    },
+    {
+      "name": "University of Exeter (UK)",
+      "count": 6,
+      "min_year": 2010,
+      "max_year": 2013
+    },
+    {
+      "name": "Montana State University",
+      "count": 5,
+      "min_year": 2012,
+      "max_year": 2020
+    },
+    {
+      "name": "Tübingen. Universität",
+      "count": 5,
+      "min_year": 1878,
+      "max_year": 1994
+    },
+    {
+      "name": "Boston University Graduate School",
+      "count": 5,
+      "min_year": 1978,
+      "max_year": 1982
+    },
+    {
+      "name": "University of Alabama",
+      "count": 5,
+      "min_year": 1982,
+      "max_year": 2022
+    },
+    {
+      "name": "Mississippi State University",
+      "count": 5,
+      "min_year": 1990,
+      "max_year": 2018
+    },
+    {
+      "name": "University of Arkansas",
+      "count": 5,
+      "min_year": 1997,
+      "max_year": 2018
+    },
+    {
+      "name": "Florida International University",
+      "count": 5,
+      "min_year": 2008,
+      "max_year": 2018
+    },
+    {
+      "name": "University of Guelph (Canada)",
+      "count": 5,
+      "min_year": 1990,
+      "max_year": 2008
+    },
+    {
+      "name": "Université de Montréal (Canada)",
+      "count": 5,
+      "min_year": 2001,
+      "max_year": 2013
+    },
+    {
+      "name": "University of Puerto Rico, Rio Piedras",
+      "count": 5,
+      "min_year": 2004,
+      "max_year": 2015
+    },
+    {
+      "name": "Council for National Academic Awards (UK)",
+      "count": 5,
+      "min_year": 1987,
+      "max_year": 1991
+    },
+    {
+      "name": "University of York (UK)",
+      "count": 5,
+      "min_year": 1979,
+      "max_year": 2007
+    },
+    {
+      "name": "Lunds Universitet (Sweden)",
+      "count": 5,
+      "min_year": 2004,
+      "max_year": 2005
+    },
+    {
+      "name": "Universität Freiburg",
+      "count": 4,
+      "min_year": 1890,
+      "max_year": 1908
+    },
+    {
+      "name": "Northern Illinois University",
+      "count": 4,
+      "min_year": 1984,
+      "max_year": 2009
+    },
+    {
+      "name": "Universität zu Köln",
+      "count": 4,
+      "min_year": 1974,
+      "max_year": 1995
+    },
+    {
+      "name": "Concordia University (Canada)",
+      "count": 4,
+      "min_year": 2005,
+      "max_year": 2010
+    },
+    {
+      "name": "University of North Carolina at Greensboro",
+      "count": 4,
+      "min_year": 1995,
+      "max_year": 2019
+    },
+    {
+      "name": "Northern Arizona University",
+      "count": 4,
+      "min_year": 1980,
+      "max_year": 2004
+    },
+    {
+      "name": "University of Hawai'i at Manoa",
+      "count": 4,
+      "min_year": 2008,
+      "max_year": 2018
+    },
+    {
+      "name": "Queen's University (Canada)",
+      "count": 4,
+      "min_year": 1999,
+      "max_year": 2013
+    },
+    {
+      "name": "Texas Christian University",
+      "count": 4,
+      "min_year": 1978,
+      "max_year": 2009
+    },
+    {
+      "name": "University of Memphis",
+      "count": 4,
+      "min_year": 1996,
+      "max_year": 2017
+    },
+    {
+      "name": "Middle Tennessee State University",
+      "count": 4,
+      "min_year": 2000,
+      "max_year": 2017
+    },
+    {
+      "name": "Claremont Graduate School",
+      "count": 4,
+      "min_year": 1979,
+      "max_year": 1991
+    },
+    {
+      "name": "University of Texas at Arlington",
+      "count": 4,
+      "min_year": 1998,
+      "max_year": 2009
+    },
+    {
+      "name": "University of Sussex (UK)",
+      "count": 4,
+      "min_year": 1987,
+      "max_year": 1987
+    },
+    {
+      "name": "Université Laval (Canada)",
+      "count": 4,
+      "min_year": 1991,
+      "max_year": 2006
+    },
+    {
+      "name": "De Paul University",
+      "count": 4,
+      "min_year": 1983,
+      "max_year": 1998
+    },
+    {
+      "name": "University of Calgary (Canada)",
+      "count": 4,
+      "min_year": 1996,
+      "max_year": 2010
+    },
+    {
+      "name": "Martin-Luther-Universität Halle-Wittenberg",
+      "count": 4,
+      "min_year": 1924,
+      "max_year": 2019
+    },
+    {
+      "name": "Uppsala Universitet (Sweden)",
+      "count": 4,
+      "min_year": 2003,
+      "max_year": 2022
+    },
+    {
+      "name": "University of Wollongong (Australia)",
+      "count": 4,
+      "min_year": 1982,
+      "max_year": 1997
+    },
+    {
+      "name": "Würzburg. Universität",
+      "count": 4,
+      "min_year": 1984,
+      "max_year": 2001
+    },
+    {
+      "name": "Queen's University of Belfast (United Kingdom)",
+      "count": 4,
+      "min_year": 2003,
+      "max_year": 2006
+    },
+    {
+      "name": "Université de Paris",
+      "count": 3,
+      "min_year": 1968,
+      "max_year": 2008
+    },
+    {
+      "name": "St. Louis University",
+      "count": 3,
+      "min_year": 1974,
+      "max_year": 1985
+    },
+    {
+      "name": "Humboldt University of Berlin",
+      "count": 3,
+      "min_year": 1909,
+      "max_year": 1935
+    },
+    {
+      "name": "Indiana University of Pennsylvania",
+      "count": 3,
+      "min_year": 2003,
+      "max_year": 2014
+    },
+    {
+      "name": "Radcliffe College",
+      "count": 3,
+      "min_year": 1948,
+      "max_year": 1952
+    },
+    {
+      "name": "Basel. Universität",
+      "count": 3,
+      "min_year": 1937,
+      "max_year": 1971
+    },
+    {
+      "name": "University of Akron",
+      "count": 3,
+      "min_year": 1991,
+      "max_year": 1995
+    },
+    {
+      "name": "Universidad de Navarra (Spain)",
+      "count": 3,
+      "min_year": 2002,
+      "max_year": 2003
+    },
+    {
+      "name": "University of Warwick (United Kingdom)",
+      "count": 3,
+      "min_year": 1987,
+      "max_year": 2012
+    },
+    {
+      "name": "Southern Methodist University",
+      "count": 3,
+      "min_year": 1992,
+      "max_year": 2015
+    },
+    {
+      "name": "Dalhousie University (Canada)",
+      "count": 3,
+      "min_year": 1990,
+      "max_year": 2007
+    },
+    {
+      "name": "University of Southern Mississippi",
+      "count": 3,
+      "min_year": 1996,
+      "max_year": 2012
+    },
+    {
+      "name": "Trent University (Canada)",
+      "count": 3,
+      "min_year": 2018,
+      "max_year": 2023
+    },
+    {
+      "name": "University of Nevada, Reno",
+      "count": 3,
+      "min_year": 2008,
+      "max_year": 2018
+    },
+    {
+      "name": "Villanova University",
+      "count": 3,
+      "min_year": 2013,
+      "max_year": 2017
+    },
+    {
+      "name": "University of Maryland, Baltimore County",
+      "count": 3,
+      "min_year": 2015,
+      "max_year": 2018
+    },
+    {
+      "name": "Salve Regina University",
+      "count": 3,
+      "min_year": 2011,
+      "max_year": 2019
+    },
+    {
+      "name": "Heidelberg Universität",
+      "count": 3,
+      "min_year": 1879,
+      "max_year": 1994
+    },
+    {
+      "name": "Capella University",
+      "count": 3,
+      "min_year": 2001,
+      "max_year": 2007
+    },
+    {
+      "name": "École des Hautes Études en Sciences Sociales (France)",
+      "count": 3,
+      "min_year": 1980,
+      "max_year": 2003
+    },
+    {
+      "name": "Belfast University (UK)",
+      "count": 3,
+      "min_year": null,
+      "max_year": null
+    },
+    {
+      "name": "University of Nevada, Las Vegas",
+      "count": 3,
+      "min_year": 1998,
+      "max_year": 2018
+    },
+    {
+      "name": "Universidad de Valladolid (Spain)",
+      "count": 3,
+      "min_year": 2000,
+      "max_year": 2005
+    },
+    {
+      "name": "Regent University",
+      "count": 3,
+      "min_year": 2001,
+      "max_year": 2006
+    },
+    {
+      "name": "Michigan Technological University",
+      "count": 3,
+      "min_year": 1994,
+      "max_year": 2017
+    },
+    {
+      "name": "Fuller Theological Seminary",
+      "count": 3,
+      "min_year": 1987,
+      "max_year": 2004
+    },
+    {
+      "name": "University of Saskatchewan (Canada)",
+      "count": 3,
+      "min_year": 1983,
+      "max_year": 2006
+    },
+    {
+      "name": "Illinois Institute of Technology",
+      "count": 3,
+      "min_year": 2013,
+      "max_year": 2021
+    },
+    {
+      "name": "Saybrook Graduate School and Research Center",
+      "count": 3,
+      "min_year": 2004,
+      "max_year": 2009
+    },
+    {
+      "name": "Texas Woman's University",
+      "count": 3,
+      "min_year": 1987,
+      "max_year": 2001
+    },
+    {
+      "name": "Princeton Theological Seminary",
+      "count": 3,
+      "min_year": 1978,
+      "max_year": 2006
+    },
+    {
+      "name": "Universität Hamburg",
+      "count": 3,
+      "min_year": 1991,
+      "max_year": 1999
+    },
+    {
+      "name": "Kungliga Tekniska Hogskolan (Sweden)",
+      "count": 3,
+      "min_year": 2003,
+      "max_year": 2006
+    },
+    {
+      "name": "Katholieke Universiteit Leuven (Belgium)",
+      "count": 3,
+      "min_year": 2004,
+      "max_year": 2008
+    },
+    {
+      "name": "University of Victoria (Canada)",
+      "count": 3,
+      "min_year": 2007,
+      "max_year": 2010
+    },
+    {
+      "name": "Göttingen. Universität",
+      "count": 2,
+      "min_year": 1926,
+      "max_year": 1934
+    },
+    {
+      "name": "North Texas State University",
+      "count": 2,
+      "min_year": 1976,
+      "max_year": 1985
+    },
+    {
+      "name": "University of Melbourne (Australia)",
+      "count": 2,
+      "min_year": 1985,
+      "max_year": 1997
+    },
+    {
+      "name": "Union Graduate School",
+      "count": 2,
+      "min_year": 1976,
+      "max_year": 1977
+    },
+    {
+      "name": "Kansas State University",
+      "count": 2,
+      "min_year": 1974,
+      "max_year": 1976
+    },
+    {
+      "name": "Illinois State University",
+      "count": 2,
+      "min_year": 1988,
+      "max_year": 1999
+    },
+    {
+      "name": "University of Laval (Canada)",
+      "count": 2,
+      "min_year": 1997,
+      "max_year": 1997
+    },
+    {
+      "name": "San Diego State University",
+      "count": 2,
+      "min_year": 2016,
+      "max_year": 2021
+    },
+    {
+      "name": "Portland State University",
+      "count": 2,
+      "min_year": 2016,
+      "max_year": 2018
+    },
+    {
+      "name": "University of Cambridge",
+      "count": 2,
+      "min_year": 1966,
+      "max_year": 1966
+    },
+    {
+      "name": "University of Denver",
+      "count": 2,
+      "min_year": 1974,
+      "max_year": 2006
+    },
+    {
+      "name": "Baylor University",
+      "count": 2,
+      "min_year": 2010,
+      "max_year": 2017
+    },
+    {
+      "name": "University of London, University College London (United Kingdom",
+      "count": 2,
+      "min_year": 2012,
+      "max_year": 2023
+    },
+    {
+      "name": "Universidad de Huelva (Spain)",
+      "count": 2,
+      "min_year": 1998,
+      "max_year": 2007
+    },
+    {
+      "name": "National and Kapodistrian University of Athens",
+      "count": 2,
+      "min_year": 2022,
+      "max_year": 2023
+    },
+    {
+      "name": "Universitat de Valencia (Spain)",
+      "count": 2,
+      "min_year": 2014,
+      "max_year": 2016
+    },
+    {
+      "name": "Marmara Universitesi",
+      "count": 2,
+      "min_year": 2023,
+      "max_year": 2023
+    },
+    {
+      "name": "Warwick University (UK)",
+      "count": 2,
+      "min_year": null,
+      "max_year": null
+    },
+    {
+      "name": "York University (UK)",
+      "count": 2,
+      "min_year": null,
+      "max_year": null
+    },
+    {
+      "name": "University of Nottingham (UK)",
+      "count": 2,
+      "min_year": 1992,
+      "max_year": 1992
+    },
+    {
+      "name": "Australian National University",
+      "count": 2,
+      "min_year": 2010,
+      "max_year": 2022
+    },
+    {
+      "name": "University of Mississippi",
+      "count": 2,
+      "min_year": 1986,
+      "max_year": 2016
+    },
+    {
+      "name": "Virginia Commonwealth University",
+      "count": 2,
+      "min_year": 1993,
+      "max_year": 2003
+    },
+    {
+      "name": "University of Rhode Island",
+      "count": 2,
+      "min_year": 1996,
+      "max_year": 2002
+    },
+    {
+      "name": "Adelphi University",
+      "count": 2,
+      "min_year": 1975,
+      "max_year": 2001
+    },
+    {
+      "name": "Union Theological Seminary",
+      "count": 2,
+      "min_year": 1987,
+      "max_year": 2024
+    },
+    {
+      "name": "Fielding Graduate Institute",
+      "count": 2,
+      "min_year": 2002,
+      "max_year": 2004
+    },
+    {
+      "name": "Simon Fraser University",
+      "count": 2,
+      "min_year": 1979,
+      "max_year": 1996
+    },
+    {
+      "name": "Union for Experimenting Colleges and Universities",
+      "count": 2,
+      "min_year": 1983,
+      "max_year": 1987
+    },
+    {
+      "name": "University of Montana",
+      "count": 2,
+      "min_year": 1998,
+      "max_year": 2007
+    },
+    {
+      "name": "University of St. Andrews (UK)",
+      "count": 2,
+      "min_year": 1988,
+      "max_year": 1989
+    },
+    {
+      "name": "Middlesex University (UK)",
+      "count": 2,
+      "min_year": null,
+      "max_year": null
+    },
+    {
+      "name": "Ball State University",
+      "count": 2,
+      "min_year": 1977,
+      "max_year": 2005
+    },
+    {
+      "name": "Bonn University",
+      "count": 2,
+      "min_year": 1975,
+      "max_year": 1983
+    },
+    {
+      "name": "St. John's University (New York)",
+      "count": 2,
+      "min_year": 2011,
+      "max_year": 2018
+    },
+    {
+      "name": "University of London (Birkbeck College)",
+      "count": 2,
+      "min_year": null,
+      "max_year": null
+    },
+    {
+      "name": "University of Nebraska Medical Center",
+      "count": 2,
+      "min_year": 2005,
+      "max_year": 2006
+    },
+    {
+      "name": "University of Tulsa",
+      "count": 2,
+      "min_year": 1998,
+      "max_year": 2013
+    },
+    {
+      "name": "University of St. Thomas",
+      "count": 2,
+      "min_year": 1990,
+      "max_year": 2001
+    },
+    {
+      "name": "Institute of Transpersonal Psychology",
+      "count": 2,
+      "min_year": 2004,
+      "max_year": 2005
+    },
+    {
+      "name": "Sussex University (UK)",
+      "count": 2,
+      "min_year": null,
+      "max_year": null
+    },
+    {
+      "name": "King's College London (UK)",
+      "count": 2,
+      "min_year": null,
+      "max_year": null
+    },
+    {
+      "name": "Walden University",
+      "count": 2,
+      "min_year": 2008,
+      "max_year": 2014
+    },
+    {
+      "name": "Paris 7",
+      "count": 2,
+      "min_year": 2010,
+      "max_year": 2011
+    },
+    {
+      "name": "Wright Institute",
+      "count": 2,
+      "min_year": 2002,
+      "max_year": 2016
+    },
+    {
+      "name": "East Texas State University",
+      "count": 2,
+      "min_year": 1978,
+      "max_year": 1979
+    },
+    {
+      "name": "University of Missouri",
+      "count": 2,
+      "min_year": 2020,
+      "max_year": 2021
+    },
+    {
+      "name": "Southern Baptist Theological Seminary",
+      "count": 2,
+      "min_year": 2005,
+      "max_year": 2005
+    },
+    {
+      "name": "Philipps University, Marburg/Lahn",
+      "count": 2,
+      "min_year": 1980,
+      "max_year": 1980
+    },
+    {
+      "name": "Massachusetts University",
+      "count": 2,
+      "min_year": 1976,
+      "max_year": 1976
+    },
+    {
+      "name": "University of Windsor (Canada)",
+      "count": 2,
+      "min_year": 2018,
+      "max_year": 2023
+    },
+    {
+      "name": "Teesside Polytechnic (UK)",
+      "count": 2,
+      "min_year": null,
+      "max_year": null
+    },
+    {
+      "name": "University of Colorado at Denver Graduate School of Public Affairs",
+      "count": 2,
+      "min_year": 1984,
+      "max_year": 1984
+    },
+    {
+      "name": "Keele University (UK)",
+      "count": 2,
+      "min_year": null,
+      "max_year": null
+    },
+    {
+      "name": "Dalhousie University",
+      "count": 2,
+      "min_year": 1995,
+      "max_year": 2007
+    },
+    {
+      "name": "University of Zürich",
+      "count": 2,
+      "min_year": 1917,
+      "max_year": 1986
+    },
+    {
+      "name": "University of London (Great Britain)",
+      "count": 2,
+      "min_year": 1969,
+      "max_year": 1983
+    },
+    {
+      "name": "University of Liverpool (UK)",
+      "count": 2,
+      "min_year": 1985,
+      "max_year": 1990
+    },
+    {
+      "name": "München Universität",
+      "count": 2,
+      "min_year": 1988,
+      "max_year": 1993
+    },
+    {
+      "name": "Universität Regensburg",
+      "count": 2,
+      "min_year": 1995,
+      "max_year": 2018
+    },
+    {
+      "name": "Eidgenössische Technische Hochschule Zürich (Schweitz)",
+      "count": 2,
+      "min_year": 2003,
+      "max_year": 2006
+    },
+    {
+      "name": "University of York",
+      "count": 2,
+      "min_year": 2005,
+      "max_year": 2005
+    },
+    {
+      "name": "Royal Military College of Canada (Canada)",
+      "count": 2,
+      "min_year": 2004,
+      "max_year": 2009
+    },
+    {
+      "name": "Technische Universiteit Eindhoven (The Netherlands)",
+      "count": 2,
+      "min_year": 2004,
+      "max_year": 2007
+    },
+    {
+      "name": "Universiteit Gent (Belgium)",
+      "count": 2,
+      "min_year": 2006,
+      "max_year": 2006
+    },
+    {
+      "name": "Université du Québec à Montréal (Canada)",
+      "count": 2,
+      "min_year": 2006,
+      "max_year": 2007
+    },
+    {
+      "name": "University of Wales, Bangor (United Kingdom",
+      "count": 2,
+      "min_year": 2010,
+      "max_year": 2020
+    },
+    {
+      "name": "University of London, Imperial College of Science, Technology and Medicine (United Kingdom",
+      "count": 2,
+      "min_year": 2010,
+      "max_year": 2010
+    },
+    {
+      "name": "Vrije Universiteit te Amsterdam (Netherlands)",
+      "count": 2,
+      "min_year": 2017,
+      "max_year": 2018
+    },
+    {
+      "name": "Victoria University of Wellington",
+      "count": 2,
+      "min_year": 2017,
+      "max_year": 2017
+    },
+    {
+      "name": "University of Nevada",
+      "count": 1,
+      "min_year": 2007,
+      "max_year": 2007
+    },
+    {
+      "name": "Universität Leipzig",
+      "count": 1,
+      "min_year": 1927,
+      "max_year": 1927
+    },
+    {
+      "name": "University of Prague",
+      "count": 1,
+      "min_year": 1933,
+      "max_year": 1933
+    },
+    {
+      "name": "Oberlin College",
+      "count": 1,
+      "min_year": 1947,
+      "max_year": 1947
+    },
+    {
+      "name": "Universität Frankfurt am Main",
+      "count": 1,
+      "min_year": 1989,
+      "max_year": 1989
+    },
+    {
+      "name": "na",
+      "count": 1,
+      "min_year": null,
+      "max_year": null
+    },
+    {
+      "name": "College of William and Mary in Virginia",
+      "count": 1,
+      "min_year": 1986,
+      "max_year": 1986
+    },
+    {
+      "name": "University of London (KCL)",
+      "count": 1,
+      "min_year": null,
+      "max_year": null
+    },
+    {
+      "name": "University of Michigan-Flint",
+      "count": 1,
+      "min_year": 2019,
+      "max_year": 2019
+    },
+    {
+      "name": "Katholische Universität Eichstätt",
+      "count": 1,
+      "min_year": 1987,
+      "max_year": 1987
+    },
+    {
+      "name": "Aston University, Birmingham (UK)",
+      "count": 1,
+      "min_year": null,
+      "max_year": null
+    },
+    {
+      "name": "Universidad de Buenos Aires",
+      "count": 1,
+      "min_year": 1958,
+      "max_year": 1958
+    },
+    {
+      "name": "[none?]",
+      "count": 1,
+      "min_year": null,
+      "max_year": null
+    },
+    {
+      "name": "Universitat de Barcelona",
+      "count": 1,
+      "min_year": 1936,
+      "max_year": 1936
+    },
+    {
+      "name": "Leuven University",
+      "count": 1,
+      "min_year": 1954,
+      "max_year": 1954
+    },
+    {
+      "name": "Universiteit Antwerpen (Belgium)",
+      "count": 1,
+      "min_year": 2015,
+      "max_year": 2015
+    },
+    {
+      "name": "Liberty University",
+      "count": 1,
+      "min_year": 2017,
+      "max_year": 2017
+    },
+    {
+      "name": "Université de Genève",
+      "count": 1,
+      "min_year": 1966,
+      "max_year": 1966
+    },
+    {
+      "name": "Drexel University",
+      "count": 1,
+      "min_year": 2016,
+      "max_year": 2016
+    },
+    {
+      "name": "University of Paris X",
+      "count": 1,
+      "min_year": 1974,
+      "max_year": 1974
+    },
+    {
+      "name": "California Institute of Asian Studies",
+      "count": 1,
+      "min_year": 1974,
+      "max_year": 1974
+    },
+    {
+      "name": "Dartmouth College",
+      "count": 1,
+      "min_year": 1976,
+      "max_year": 1976
+    },
+    {
+      "name": "University of Northern Colorado",
+      "count": 1,
+      "min_year": 1978,
+      "max_year": 1978
+    },
+    {
+      "name": "Lübeck Medizinische Hochschule",
+      "count": 1,
+      "min_year": 1984,
+      "max_year": 1984
+    },
+    {
+      "name": "Universität Bielefeld",
+      "count": 1,
+      "min_year": 1987,
+      "max_year": 1987
+    },
+    {
+      "name": "University of Liverpool (United Kingdom)",
+      "count": 1,
+      "min_year": 1992,
+      "max_year": 1992
+    },
+    {
+      "name": "Marburg. Universität",
+      "count": 1,
+      "min_year": 1992,
+      "max_year": 1992
+    },
+    {
+      "name": "Universite du Quebec a Trois-Rivieres",
+      "count": 1,
+      "min_year": 2012,
+      "max_year": 2012
+    },
+    {
+      "name": "NONE",
+      "count": 1,
+      "min_year": null,
+      "max_year": null
+    },
+    {
+      "name": "Universytet Lwowski",
+      "count": 1,
+      "min_year": 1926,
+      "max_year": 1926
+    },
+    {
+      "name": "University of London, Westfield College (UK)",
+      "count": 1,
+      "min_year": null,
+      "max_year": null
+    },
+    {
+      "name": "Fielding Institute",
+      "count": 1,
+      "min_year": 1998,
+      "max_year": 1998
+    },
+    {
+      "name": "University of North Carolina at Chapel Hill. Advisor: Ariel",
+      "count": 1,
+      "min_year": 2007,
+      "max_year": 2007
+    },
+    {
+      "name": "Friedrich-Schiller-Universität Jena",
+      "count": 1,
+      "min_year": 1921,
+      "max_year": 1921
+    },
+    {
+      "name": "Erlangen University",
+      "count": 1,
+      "min_year": 1915,
+      "max_year": 1915
+    },
+    {
+      "name": "City University of New York",
+      "count": 1,
+      "min_year": 2017,
+      "max_year": 2017
+    },
+    {
+      "name": "Universiteit Utrecht",
+      "count": 1,
+      "min_year": 1991,
+      "max_year": 1991
+    },
+    {
+      "name": "Southwestern Baptist Theological Seminary",
+      "count": 1,
+      "min_year": 2002,
+      "max_year": 2002
+    },
+    {
+      "name": "New Mexico State University",
+      "count": 1,
+      "min_year": 2000,
+      "max_year": 2000
+    },
+    {
+      "name": "Massachusetts School of Professional Psychology",
+      "count": 1,
+      "min_year": 2004,
+      "max_year": 2004
+    },
+    {
+      "name": "University of Fribourg (Switzerland)",
+      "count": 1,
+      "min_year": 1965,
+      "max_year": 1965
+    },
+    {
+      "name": "Simon Fraser University (Canada)",
+      "count": 1,
+      "min_year": 1982,
+      "max_year": 1982
+    },
+    {
+      "name": "Queen's University, Belfast",
+      "count": 1,
+      "min_year": null,
+      "max_year": null
+    },
+    {
+      "name": "Andrews University",
+      "count": 1,
+      "min_year": 2001,
+      "max_year": 2001
+    },
+    {
+      "name": "Universidad de Deusto (Spain)",
+      "count": 1,
+      "min_year": 2009,
+      "max_year": 2009
+    },
+    {
+      "name": "University of Toledo",
+      "count": 1,
+      "min_year": 2006,
+      "max_year": 2006
+    },
+    {
+      "name": "Northcentral University",
+      "count": 1,
+      "min_year": 2021,
+      "max_year": 2021
+    },
+    {
+      "name": "University of Lethbridge (Canada)",
+      "count": 1,
+      "min_year": 2016,
+      "max_year": 2016
+    },
+    {
+      "name": "Pratt Institute",
+      "count": 1,
+      "min_year": 2023,
+      "max_year": 2023
+    },
+    {
+      "name": "Vienna. Universität",
+      "count": 1,
+      "min_year": 1928,
+      "max_year": 1928
+    },
+    {
+      "name": "Hood College",
+      "count": 1,
+      "min_year": 2019,
+      "max_year": 2019
+    },
+    {
+      "name": "The University of Texas at El Paso",
+      "count": 1,
+      "min_year": 2019,
+      "max_year": 2019
+    },
+    {
+      "name": "California State University, Los Angeles",
+      "count": 1,
+      "min_year": 2016,
+      "max_year": 2016
+    },
+    {
+      "name": "Ghent University",
+      "count": 1,
+      "min_year": 1911,
+      "max_year": 1911
+    },
+    {
+      "name": "Newcastle Polytechnik (UK)",
+      "count": 1,
+      "min_year": null,
+      "max_year": null
+    },
+    {
+      "name": "Pardee RAND Graduate School",
+      "count": 1,
+      "min_year": 2013,
+      "max_year": 2013
+    },
+    {
+      "name": "University of Adelaide (Australia)",
+      "count": 1,
+      "min_year": 1994,
+      "max_year": 1994
+    },
+    {
+      "name": "University of Wales, Swansea (UK)",
+      "count": 1,
+      "min_year": null,
+      "max_year": null
+    },
+    {
+      "name": "Universidade de Évora",
+      "count": 1,
+      "min_year": 2018,
+      "max_year": 2018
+    },
+    {
+      "name": "Alliant International University",
+      "count": 1,
+      "min_year": 2007,
+      "max_year": 2007
+    },
+    {
+      "name": "The University of Utah Press",
+      "count": 1,
+      "min_year": 2017,
+      "max_year": 2017
+    },
+    {
+      "name": "Southern New Hampshire University",
+      "count": 1,
+      "min_year": 2018,
+      "max_year": 2018
+    },
+    {
+      "name": "University of Southwestern Louisiana",
+      "count": 1,
+      "min_year": 1980,
+      "max_year": 1980
+    },
+    {
+      "name": "Brock University (Canada)",
+      "count": 1,
+      "min_year": 2023,
+      "max_year": 2023
+    },
+    {
+      "name": "Salford University (UK)",
+      "count": 1,
+      "min_year": null,
+      "max_year": null
+    },
+    {
+      "name": "The Ohio State University Press",
+      "count": 1,
+      "min_year": 2019,
+      "max_year": 2019
+    },
+    {
+      "name": "Loughborough University (UK)",
+      "count": 1,
+      "min_year": null,
+      "max_year": null
+    },
+    {
+      "name": "Drake University",
+      "count": 1,
+      "min_year": 1978,
+      "max_year": 1978
+    },
+    {
+      "name": "Universidad de Zaragoza (Spain)",
+      "count": 1,
+      "min_year": 2006,
+      "max_year": 2006
+    },
+    {
+      "name": "Universidad de la Rioja (Spain)",
+      "count": 1,
+      "min_year": 2000,
+      "max_year": 2000
+    },
+    {
+      "name": "State University of New York",
+      "count": 1,
+      "min_year": 2012,
+      "max_year": 2012
+    },
+    {
+      "name": "Universität Erlangen-Nürnberg",
+      "count": 1,
+      "min_year": 1971,
+      "max_year": 1971
+    },
+    {
+      "name": "Universidad Complutense (Madrid)",
+      "count": 1,
+      "min_year": 2004,
+      "max_year": 2004
+    },
+    {
+      "name": "Aberdeen University (UK)",
+      "count": 1,
+      "min_year": null,
+      "max_year": null
+    },
+    {
+      "name": "Jewish Theological Seminary of America",
+      "count": 1,
+      "min_year": 1993,
+      "max_year": 1993
+    },
+    {
+      "name": "Miami Institute of Psychology of the Caribbean Center for Advanced Studies",
+      "count": 1,
+      "min_year": 2000,
+      "max_year": 2000
+    },
+    {
+      "name": "Colorado State University",
+      "count": 1,
+      "min_year": 2005,
+      "max_year": 2005
+    },
+    {
+      "name": "Kobenhavns Universitet",
+      "count": 1,
+      "min_year": 1971,
+      "max_year": 1971
+    },
+    {
+      "name": "University of Massachusetts Boston",
+      "count": 1,
+      "min_year": 2009,
+      "max_year": 2009
+    },
+    {
+      "name": "Chelsea Campus, University of London (UK)",
+      "count": 1,
+      "min_year": null,
+      "max_year": null
+    },
+    {
+      "name": "Middlesex Polytechnic (UK)",
+      "count": 1,
+      "min_year": null,
+      "max_year": null
+    },
+    {
+      "name": "Lancaster Polytechnic (UK)",
+      "count": 1,
+      "min_year": null,
+      "max_year": null
+    },
+    {
+      "name": "University of Louisiana at Lafayette",
+      "count": 1,
+      "min_year": 2001,
+      "max_year": 2001
+    },
+    {
+      "name": "Hebrew Union College",
+      "count": 1,
+      "min_year": 1998,
+      "max_year": 1998
+    },
+    {
+      "name": "Mercer University",
+      "count": 1,
+      "min_year": 2016,
+      "max_year": 2016
+    },
+    {
+      "name": "John Moores University Liverpool (UK)",
+      "count": 1,
+      "min_year": null,
+      "max_year": null
+    },
+    {
+      "name": "Fielding Graduate University",
+      "count": 1,
+      "min_year": 2008,
+      "max_year": 2008
+    },
+    {
+      "name": "Dokuz Eylul Universitesi (Turkey)",
+      "count": 1,
+      "min_year": 2023,
+      "max_year": 2023
+    },
+    {
+      "name": "Lutheran School of Theology",
+      "count": 1,
+      "min_year": 2000,
+      "max_year": 2000
+    },
+    {
+      "name": "University of Surrey (United Kingdom)",
+      "count": 1,
+      "min_year": 2016,
+      "max_year": 2016
+    },
+    {
+      "name": "University of South Africa",
+      "count": 1,
+      "min_year": 2005,
+      "max_year": 2005
+    },
+    {
+      "name": "University of San Francisco",
+      "count": 1,
+      "min_year": 2005,
+      "max_year": 2005
+    },
+    {
+      "name": "East Carolina University",
+      "count": 1,
+      "min_year": 2018,
+      "max_year": 2018
+    },
+    {
+      "name": "Université Paris Diderot",
+      "count": 1,
+      "min_year": 2018,
+      "max_year": 2018
+    },
+    {
+      "name": "University of New Orleans",
+      "count": 1,
+      "min_year": 2006,
+      "max_year": 2006
+    },
+    {
+      "name": "Lund University",
+      "count": 1,
+      "min_year": 2013,
+      "max_year": 2013
+    },
+    {
+      "name": "University of Colorado at Denver",
+      "count": 1,
+      "min_year": 2004,
+      "max_year": 2004
+    },
+    {
+      "name": "ProQuest Dissertations & Theses",
+      "count": 1,
+      "min_year": 2020,
+      "max_year": 2020
+    },
+    {
+      "name": "Sheffield Hallam University (UK)",
+      "count": 1,
+      "min_year": null,
+      "max_year": null
+    },
+    {
+      "name": "ProQuest Information & Learning (US)",
+      "count": 1,
+      "min_year": 2014,
+      "max_year": 2014
+    },
+    {
+      "name": "Memorial University of Newfoundland (Canada)",
+      "count": 1,
+      "min_year": 1992,
+      "max_year": 1992
+    },
+    {
+      "name": "Seoul National University, Korea",
+      "count": 1,
+      "min_year": null,
+      "max_year": null
+    },
+    {
+      "name": "Wake Forest University",
+      "count": 1,
+      "min_year": 2021,
+      "max_year": 2021
+    },
+    {
+      "name": "Akademiia Nauk SSSR",
+      "count": 1,
+      "min_year": 1972,
+      "max_year": 1972
+    },
+    {
+      "name": "Franklin Pierce University",
+      "count": 1,
+      "min_year": 2011,
+      "max_year": 2011
+    },
+    {
+      "name": "University of the Pacific",
+      "count": 1,
+      "min_year": 2023,
+      "max_year": 2023
+    },
+    {
+      "name": "University of London (External degree)",
+      "count": 1,
+      "min_year": null,
+      "max_year": null
+    },
+    {
+      "name": "Saybrook University",
+      "count": 1,
+      "min_year": 2015,
+      "max_year": 2015
+    },
+    {
+      "name": "Southeastern Baptist Theological Seminary",
+      "count": 1,
+      "min_year": 2008,
+      "max_year": 2008
+    },
+    {
+      "name": "South West Essex Technical College",
+      "count": 1,
+      "min_year": 1946,
+      "max_year": 1946
+    },
+    {
+      "name": "United States International University",
+      "count": 1,
+      "min_year": 2001,
+      "max_year": 2001
+    },
+    {
+      "name": "Antioch University",
+      "count": 1,
+      "min_year": 2015,
+      "max_year": 2015
+    },
+    {
+      "name": "Queen's University",
+      "count": 1,
+      "min_year": 2019,
+      "max_year": 2019
+    },
+    {
+      "name": "Dowling College",
+      "count": 1,
+      "min_year": 2002,
+      "max_year": 2002
+    },
+    {
+      "name": "Universidade do Porto",
+      "count": 1,
+      "min_year": 2023,
+      "max_year": 2023
+    },
+    {
+      "name": "Florida Atlantic University",
+      "count": 1,
+      "min_year": 2016,
+      "max_year": 2016
+    },
+    {
+      "name": "University of New York",
+      "count": 1,
+      "min_year": 2008,
+      "max_year": 2008
+    },
+    {
+      "name": "Pontificia Università della Santa Croce",
+      "count": 1,
+      "min_year": 2003,
+      "max_year": 2003
+    },
+    {
+      "name": "University of North Carolina",
+      "count": 1,
+      "min_year": 1977,
+      "max_year": 1977
+    },
+    {
+      "name": "Universität Wien",
+      "count": 1,
+      "min_year": 1928,
+      "max_year": 1928
+    },
+    {
+      "name": "North Carolina State University",
+      "count": 1,
+      "min_year": 2009,
+      "max_year": 2009
+    },
+    {
+      "name": "Bard Graduate Center for Studies in the Decorative Arts, Design, and Culture",
+      "count": 1,
+      "min_year": 2013,
+      "max_year": 2013
+    },
+    {
+      "name": "Universidad de Valladolid",
+      "count": 1,
+      "min_year": 2005,
+      "max_year": 2005
+    },
+    {
+      "name": "Università di Roma",
+      "count": 1,
+      "min_year": 1925,
+      "max_year": 1925
+    },
+    {
+      "name": "Howard University",
+      "count": 1,
+      "min_year": 2002,
+      "max_year": 2002
+    },
+    {
+      "name": "Aquinas Institute of Philosophy",
+      "count": 1,
+      "min_year": 1966,
+      "max_year": 1966
+    },
+    {
+      "name": "University of Alaska, Fairbanks",
+      "count": 1,
+      "min_year": 1997,
+      "max_year": 1997
+    },
+    {
+      "name": "Oxford Brookes University (UK)",
+      "count": 1,
+      "min_year": null,
+      "max_year": null
+    },
+    {
+      "name": "University of London (Birkbeck)",
+      "count": 1,
+      "min_year": null,
+      "max_year": null
+    },
+    {
+      "name": "Universita degli Studi di Milano (Italy)",
+      "count": 1,
+      "min_year": 2011,
+      "max_year": 2011
+    },
+    {
+      "name": "University of Louisiana at Monroe",
+      "count": 1,
+      "min_year": 2006,
+      "max_year": 2006
+    },
+    {
+      "name": "Uniformed Services University of the Health Sciences",
+      "count": 1,
+      "min_year": 2003,
+      "max_year": 2003
+    },
+    {
+      "name": "University of Rochester School of Nursing",
+      "count": 1,
+      "min_year": 2005,
+      "max_year": 2005
+    },
+    {
+      "name": "Universiteit Leiden",
+      "count": 1,
+      "min_year": 1922,
+      "max_year": 1922
+    },
+    {
+      "name": "Pepperdine University",
+      "count": 1,
+      "min_year": 2002,
+      "max_year": 2002
+    },
+    {
+      "name": "University of Detroit",
+      "count": 1,
+      "min_year": 1980,
+      "max_year": 1980
+    },
+    {
+      "name": "Clemson University",
+      "count": 1,
+      "min_year": 2015,
+      "max_year": 2015
+    },
+    {
+      "name": "Imperial College, University of London",
+      "count": 1,
+      "min_year": null,
+      "max_year": null
+    },
+    {
+      "name": "University of Otago",
+      "count": 1,
+      "min_year": 2015,
+      "max_year": 2015
+    },
+    {
+      "name": "Medical University of South Carolina, College of Health Professions",
+      "count": 1,
+      "min_year": 1999,
+      "max_year": 1999
+    },
+    {
+      "name": "University of Northumbria at Newcastle (UK)",
+      "count": 1,
+      "min_year": null,
+      "max_year": null
+    },
+    {
+      "name": "Glasgow University (UK)",
+      "count": 1,
+      "min_year": null,
+      "max_year": null
+    },
+    {
+      "name": "Stirling University (UK)",
+      "count": 1,
+      "min_year": null,
+      "max_year": null
+    },
+    {
+      "name": "University of Nebraska at Kearney",
+      "count": 1,
+      "min_year": 2023,
+      "max_year": 2023
+    },
+    {
+      "name": "Memphis State University",
+      "count": 1,
+      "min_year": 1985,
+      "max_year": 1985
+    },
+    {
+      "name": "Gonzaga University",
+      "count": 1,
+      "min_year": 2004,
+      "max_year": 2004
+    },
+    {
+      "name": "University of North Dakota",
+      "count": 1,
+      "min_year": 2022,
+      "max_year": 2022
+    },
+    {
+      "name": "Japan Women's University",
+      "count": 1,
+      "min_year": 2006,
+      "max_year": 2006
+    },
+    {
+      "name": "Humboldt Universität zu Berlin",
+      "count": 1,
+      "min_year": 1926,
+      "max_year": 1926
+    },
+    {
+      "name": "Berlin University",
+      "count": 1,
+      "min_year": 1908,
+      "max_year": 1908
+    },
+    {
+      "name": "University of Munich",
+      "count": 1,
+      "min_year": 1909,
+      "max_year": 1909
+    },
+    {
+      "name": "Rijksuniversiteit, Utrecht",
+      "count": 1,
+      "min_year": 1973,
+      "max_year": 1973
+    },
+    {
+      "name": "University of Paris III",
+      "count": 1,
+      "min_year": 1973,
+      "max_year": 1973
+    },
+    {
+      "name": "University of Illinois at Urbana",
+      "count": 1,
+      "min_year": 1974,
+      "max_year": 1974
+    },
+    {
+      "name": "University of South California",
+      "count": 1,
+      "min_year": 1974,
+      "max_year": 1974
+    },
+    {
+      "name": "George Peabody College for Teachers",
+      "count": 1,
+      "min_year": 1974,
+      "max_year": 1974
+    },
+    {
+      "name": "St. John's University",
+      "count": 1,
+      "min_year": 1974,
+      "max_year": 1974
+    },
+    {
+      "name": "Yeshiva University",
+      "count": 1,
+      "min_year": 1975,
+      "max_year": 1975
+    },
+    {
+      "name": "School of Theology at Claremont",
+      "count": 1,
+      "min_year": 1975,
+      "max_year": 1975
+    },
+    {
+      "name": "University of Copenhagen",
+      "count": 1,
+      "min_year": 1975,
+      "max_year": 1975
+    },
+    {
+      "name": "York University",
+      "count": 1,
+      "min_year": 1975,
+      "max_year": 1975
+    },
+    {
+      "name": "University of Paris V",
+      "count": 1,
+      "min_year": 1978,
+      "max_year": 1978
+    },
+    {
+      "name": "University of Marburg",
+      "count": 1,
+      "min_year": 1978,
+      "max_year": 1978
+    },
+    {
+      "name": "Vrije Universiteit te Amsterdam",
+      "count": 1,
+      "min_year": 1979,
+      "max_year": 1979
+    },
+    {
+      "name": "Mainz. Universität",
+      "count": 1,
+      "min_year": 1981,
+      "max_year": 1981
+    },
+    {
+      "name": "University of Wyoming",
+      "count": 1,
+      "min_year": 1986,
+      "max_year": 1986
+    },
+    {
+      "name": "University of Aston in Birmingham (UK)",
+      "count": 1,
+      "min_year": 1986,
+      "max_year": 1986
+    },
+    {
+      "name": "Aston University (UK)",
+      "count": 1,
+      "min_year": 1987,
+      "max_year": 1987
+    },
+    {
+      "name": "Salzburg Universität",
+      "count": 1,
+      "min_year": 1987,
+      "max_year": 1987
+    },
+    {
+      "name": "Fakultät für Chemie und Pharmazie",
+      "count": 1,
+      "min_year": 1987,
+      "max_year": 1987
+    },
+    {
+      "name": "University of New Brunswick (Canada)",
+      "count": 1,
+      "min_year": 1987,
+      "max_year": 1987
+    },
+    {
+      "name": "University of Technology, Loughborough (U.K.)",
+      "count": 1,
+      "min_year": 1988,
+      "max_year": 1988
+    },
+    {
+      "name": "Universität Bochum",
+      "count": 1,
+      "min_year": 1988,
+      "max_year": 1988
+    },
+    {
+      "name": "Katholieke Universiteit te Nijmegen",
+      "count": 1,
+      "min_year": 1988,
+      "max_year": 1988
+    },
+    {
+      "name": "University of Bristol (UK)",
+      "count": 1,
+      "min_year": 1988,
+      "max_year": 1988
+    },
+    {
+      "name": "Giessen. Universität",
+      "count": 1,
+      "min_year": 1988,
+      "max_year": 1988
+    },
+    {
+      "name": "University of Kingston (Canada)",
+      "count": 1,
+      "min_year": 1988,
+      "max_year": 1988
+    },
+    {
+      "name": "University of Dallas",
+      "count": 1,
+      "min_year": 1989,
+      "max_year": 1989
+    },
+    {
+      "name": "Technische Hochschule Aachen",
+      "count": 1,
+      "min_year": 1990,
+      "max_year": 1990
+    },
+    {
+      "name": "Braunschweig",
+      "count": 1,
+      "min_year": 1990,
+      "max_year": 1990
+    },
+    {
+      "name": "University of St. Michael's College (Canada)",
+      "count": 1,
+      "min_year": 1991,
+      "max_year": 1991
+    },
+    {
+      "name": "University of Kent at Canterbury (United Kingdom)",
+      "count": 1,
+      "min_year": 1992,
+      "max_year": 1992
+    },
+    {
+      "name": "Gesamthochschule Kassel",
+      "count": 1,
+      "min_year": 1992,
+      "max_year": 1992
+    },
+    {
+      "name": "Universiteit Twente",
+      "count": 1,
+      "min_year": 1994,
+      "max_year": 1994
+    },
+    {
+      "name": "Universität Stuttgart",
+      "count": 1,
+      "min_year": 1997,
+      "max_year": 1997
+    },
+    {
+      "name": "University of Aarhus, Denmark",
+      "count": 1,
+      "min_year": 2000,
+      "max_year": 2000
+    },
+    {
+      "name": "Turun Yliopisto (Finland)",
+      "count": 1,
+      "min_year": 2003,
+      "max_year": 2003
+    },
+    {
+      "name": "Technische Universiteit Te Delft (the Netherlands)",
+      "count": 1,
+      "min_year": 2003,
+      "max_year": 2003
+    },
+    {
+      "name": "University of Reading",
+      "count": 1,
+      "min_year": 2003,
+      "max_year": 2003
+    },
+    {
+      "name": "Universidad de Alcalá",
+      "count": 1,
+      "min_year": 2004,
+      "max_year": 2004
+    },
+    {
+      "name": "Helsingin yliopisto (Finland)",
+      "count": 1,
+      "min_year": 2004,
+      "max_year": 2004
+    },
+    {
+      "name": "Universiteit Twente (Netherlands)",
+      "count": 1,
+      "min_year": 2005,
+      "max_year": 2005
+    },
+    {
+      "name": "Institute for the History of Science, Polish Academy of Science",
+      "count": 1,
+      "min_year": 2005,
+      "max_year": 2005
+    },
+    {
+      "name": "Abo Akademi (Finland)",
+      "count": 1,
+      "min_year": 2005,
+      "max_year": 2005
+    },
+    {
+      "name": "Tsurumi Daigaku (Japan)",
+      "count": 1,
+      "min_year": 2006,
+      "max_year": 2006
+    },
+    {
+      "name": "Carleton University",
+      "count": 1,
+      "min_year": 2007,
+      "max_year": 2007
+    },
+    {
+      "name": "Lyon. Université",
+      "count": 1,
+      "min_year": 2008,
+      "max_year": 2008
+    },
+    {
+      "name": "Chicago School of Professional Psychology",
+      "count": 1,
+      "min_year": 2009,
+      "max_year": 2009
+    },
+    {
+      "name": "University of London, Royal Holloway College (United Kingdom",
+      "count": 1,
+      "min_year": 2010,
+      "max_year": 2010
+    },
+    {
+      "name": "London Metropolitan University (United Kingdom",
+      "count": 1,
+      "min_year": 2010,
+      "max_year": 2010
+    },
+    {
+      "name": "Cardiff University (United Kingdom",
+      "count": 1,
+      "min_year": 2010,
+      "max_year": 2010
+    },
+    {
+      "name": "University of Newcastle Upon Tyne (United Kingdom",
+      "count": 1,
+      "min_year": 2010,
+      "max_year": 2010
+    },
+    {
+      "name": "University of Portsmouth (United Kingdom",
+      "count": 1,
+      "min_year": 2010,
+      "max_year": 2010
+    },
+    {
+      "name": "Liverpool John Moores University (United Kingdom",
+      "count": 1,
+      "min_year": 2010,
+      "max_year": 2010
+    },
+    {
+      "name": "University of Birmingham (United Kingdom)",
+      "count": 1,
+      "min_year": 2012,
+      "max_year": 2012
+    },
+    {
+      "name": "University of Plymouth (United Kingdom",
+      "count": 1,
+      "min_year": 2012,
+      "max_year": 2012
+    },
+    {
+      "name": "Universitat de València",
+      "count": 1,
+      "min_year": 2015,
+      "max_year": 2015
+    },
+    {
+      "name": "Sam Houston State University",
+      "count": 1,
+      "min_year": 2016,
+      "max_year": 2016
+    },
+    {
+      "name": "Webster University",
+      "count": 1,
+      "min_year": 2017,
+      "max_year": 2017
+    },
+    {
+      "name": "Universidade de Lisboa",
+      "count": 1,
+      "min_year": 2018,
+      "max_year": 2018
+    },
+    {
+      "name": "National Taiwan University",
+      "count": 1,
+      "min_year": 2020,
+      "max_year": 2020
+    },
+    {
+      "name": "Sciences Po",
+      "count": 1,
+      "min_year": 2020,
+      "max_year": 2020
+    },
+    {
+      "name": "[University of California, Berkeley ?]",
+      "count": 1,
+      "min_year": null,
+      "max_year": null
+    },
+    {
+      "name": "University de Paris VII",
+      "count": 1,
+      "min_year": null,
+      "max_year": null
+    },
+    {
+      "name": "Technische Universität, Hannover",
+      "count": 1,
+      "min_year": null,
+      "max_year": null
+    },
+    {
+      "name": "Exeter University (UK)",
+      "count": 1,
+      "min_year": null,
+      "max_year": null
+    },
+    {
+      "name": "Universiteit Twente, Enschede",
+      "count": 1,
+      "min_year": null,
+      "max_year": null
+    },
+    {
+      "name": "East Anglia University (UK)",
+      "count": 1,
+      "min_year": null,
+      "max_year": null
+    },
+    {
+      "name": "École Nationale des Chartes, Paris",
+      "count": 1,
+      "min_year": null,
+      "max_year": null
+    },
+    {
+      "name": "Université de Montréal",
+      "count": 1,
+      "min_year": null,
+      "max_year": null
+    },
+    {
+      "name": "Université René Descartes de Paris",
+      "count": 1,
+      "min_year": null,
+      "max_year": null
+    }
+  ],
+  "pareto": {
+    "top_10_count": 2804,
+    "top_10_percent": 0.2864439677188681,
+    "top_25_percent_count": 8858,
+    "top_25_percent": 0.9048932475227296,
+    "gini": 0.8065041129382653
+  }
+}
