@@ -1,11 +1,12 @@
-# CLAUDE.md - IsisCB Dissertations Editor
+# CLAUDE.md - IsisCB Dissertations
 
 ## Project Overview
 
-A web application for managing History of Science dissertation records (~10,000 records). This is the authoritative data source for the IsisCB Dissertations project, replacing the previous Google Sheets workflow.
+A web application suite for managing and exploring History of Science dissertation records (~10,000 records). Includes an **Editor** app for CRUD operations and an **Explorer** app for interactive data visualizations.
 
 **Live URLs:**
-- **Frontend:** https://isiscb-dissertations.onrender.com
+- **Editor:** https://isiscb-dissertations.onrender.com
+- **Explorer:** https://isiscb-dissertations-explorer.onrender.com
 - **API:** https://isiscb-dissertations-api.onrender.com
 - **Repository:** https://github.com/coronium/isiscb-dissertations
 - **Database:** https://guswnhmbvgnspsdhsqby.supabase.co
@@ -16,19 +17,40 @@ A web application for managing History of Science dissertation records (~10,000 
 - ✅ Database schema deployed to Supabase
 - ✅ 9,813 dissertation records imported from CSV
 - ✅ API deployed to Render (production)
-- ✅ Frontend deployed to Render (production)
+- ✅ Editor frontend deployed to Render (production)
+- ✅ Explorer visualization app deployed to Render (production)
 - ✅ Search functionality with separate name/school/title fields
 - ✅ Advisor search working via database RPC functions
 - ✅ Authority IDs linked to IsisCB (CBA* IDs)
 - ✅ Soft delete with audit logging
+- ✅ 8 interactive D3.js visualizations in Explorer
 - ⏳ Editor login needs testing
 - ⏳ Unit tests not yet written
 
 ## Architecture
 
 ```
-Frontend (Vanilla JS)  →  API (Node.js/Express)  →  Database (Supabase PostgreSQL)
-     Render Static           Render Web Service         Supabase
+┌─────────────────────────────────────────────────────────────────────────┐
+│                            Frontend Apps                                 │
+├──────────────────────────────┬──────────────────────────────────────────┤
+│   Editor (Vanilla JS)        │   Explorer (Vanilla JS + D3.js)          │
+│   - CRUD operations          │   - 8 interactive visualizations         │
+│   - Search/filter            │   - Pre-computed JSON snapshots          │
+│   - Authority management     │   - Animated charts and maps             │
+└──────────────────────────────┴──────────────────────────────────────────┘
+                                      │
+                                      ▼
+                    ┌─────────────────────────────────┐
+                    │   API (Node.js/Express)          │
+                    │   - Authentication               │
+                    │   - Dissertations CRUD           │
+                    │   - Explorer snapshot endpoints  │
+                    └─────────────────────────────────┘
+                                      │
+                                      ▼
+                    ┌─────────────────────────────────┐
+                    │   Database (Supabase PostgreSQL) │
+                    └─────────────────────────────────┘
 ```
 
 ## Quick Reference
@@ -39,9 +61,12 @@ Frontend (Vanilla JS)  →  API (Node.js/Express)  →  Database (Supabase Postg
 # API (from api/ directory)
 npm install && npm run dev   # Runs on http://localhost:3000
 
-# Frontend - just open in browser
+# Editor - just open in browser or serve
 open frontend/index.html
-# Or serve it: cd frontend && npx serve .
+cd frontend && npx serve .
+
+# Explorer - serve static files
+cd explorer && npx serve .   # Runs on http://localhost:3000 (or next available)
 ```
 
 ### Importing Data
@@ -65,31 +90,63 @@ cd api && node scripts/import-csv.js ../data/Dissertations-2025.12.14-1.csv
 isiscb-dissertations/
 ├── api/
 │   ├── src/
-│   │   ├── routes/         # Express route handlers
-│   │   ├── middleware/     # Auth, validation middleware
-│   │   ├── services/       # Business logic
-│   │   ├── models/         # Database queries
-│   │   └── utils/          # Helpers, constants
+│   │   ├── routes/              # Express route handlers (incl. explorer.js)
+│   │   ├── middleware/          # Auth, validation middleware
+│   │   ├── services/            # Business logic
+│   │   ├── models/              # Database queries
+│   │   └── utils/               # Helpers, constants
+│   ├── scripts/
+│   │   └── generate-explorer-snapshots.js  # CLI snapshot generator
 │   ├── tests/
 │   └── package.json
-├── frontend/
+├── frontend/                    # Editor app
 │   ├── index.html
 │   ├── styles/
-│   │   ├── isiscb-base.css  # IsisCB UI standards (don't modify)
-│   │   └── app.css          # Project-specific styles
+│   │   ├── isiscb-base.css      # IsisCB UI standards (don't modify)
+│   │   └── app.css              # Project-specific styles
 │   ├── scripts/
-│   │   ├── app.js           # Main entry point
-│   │   ├── api.js           # API client
-│   │   ├── auth.js          # Authentication
-│   │   ├── search.js        # Search/list functionality
-│   │   ├── editor.js        # Add/edit forms
-│   │   └── components/      # Reusable UI components
+│   │   ├── app.js               # Main entry point
+│   │   ├── api.js               # API client
+│   │   ├── auth.js              # Authentication
+│   │   ├── search.js            # Search/list functionality
+│   │   ├── editor.js            # Add/edit forms
+│   │   └── components/          # Reusable UI components
 │   └── pages/
+├── explorer/                    # Explorer visualization app
+│   ├── index.html
+│   ├── styles/
+│   │   ├── isiscb-base.css      # IsisCB UI standards
+│   │   └── explorer.css         # Explorer-specific styles
+│   ├── scripts/
+│   │   ├── config.js            # Config (API URL, school colors)
+│   │   ├── api.js               # API client
+│   │   ├── auth.js              # Authentication
+│   │   ├── state.js             # Centralized state management
+│   │   ├── app.js               # Main entry point
+│   │   ├── charts/              # D3.js visualizations
+│   │   │   ├── timeline.js      # Dissertations over time
+│   │   │   ├── schoolComparison.js  # Multi-school comparison
+│   │   │   ├── pareto.js        # School distribution
+│   │   │   ├── topShare.js      # Market concentration
+│   │   │   ├── bumpChart.js     # School rankings
+│   │   │   ├── streamgraph.js   # School output streams
+│   │   │   ├── geoMap.js        # Geographic distribution
+│   │   │   └── racingBar.js     # Top schools race
+│   │   ├── components/          # UI components
+│   │   ├── data/                # School location data
+│   │   └── utils/               # Formatters, transforms
+│   ├── data/                    # Pre-computed JSON snapshots
+│   │   ├── timeline.json
+│   │   ├── schools.json
+│   │   ├── statistics.json
+│   │   ├── school_timeseries.json
+│   │   └── meta.json
+│   └── CLAUDE.md                # Explorer-specific docs
 ├── data/
-│   └── migrations/          # SQL migration files
-├── SPECIFICATION.md         # Detailed technical spec
-├── render.yaml              # Render deployment config
-└── CLAUDE.md                # This file
+│   └── migrations/              # SQL migration files
+├── SPECIFICATION.md             # Detailed technical spec
+├── render.yaml                  # Render deployment config
+└── CLAUDE.md                    # This file
 ```
 
 ## Key Documentation
@@ -157,18 +214,30 @@ Yes, No
 ## API Endpoints Quick Reference
 
 ```
+# Authentication
 POST /api/auth/viewer              # Viewer login (access code)
 POST /api/auth/login               # Editor login
+
+# Dissertations (Editor app)
 GET  /api/dissertations            # Search/list (with query params)
 GET  /api/dissertations/schools/suggest  # School name autocomplete
 GET  /api/dissertations/:id        # Get single record
 POST /api/dissertations            # Create (editor only)
 PUT  /api/dissertations/:id        # Update (editor only)
 DELETE /api/dissertations/:id      # Soft delete (editor only)
+
+# Authorities
 GET  /api/authorities/persons      # Search people
 POST /api/authorities/persons      # Create person authority
+
+# Export
 GET  /api/export/csv               # Export all data
 POST /api/export/csv               # Export filtered results
+
+# Explorer (visualization app)
+GET  /api/explorer/snapshot/meta   # Snapshot metadata
+POST /api/explorer/refresh-snapshot  # Regenerate snapshots (editor only)
+GET  /api/explorer/schools/compare # Time series for selected schools
 ```
 
 ### Search Query Parameters
@@ -243,9 +312,10 @@ const CONFIG = {
 
 Deployed to Render via `render.yaml` (Blueprint):
 - **API:** https://isiscb-dissertations-api.onrender.com (Node.js web service)
-- **Frontend:** https://isiscb-dissertations.onrender.com (Static site)
+- **Editor:** https://isiscb-dissertations.onrender.com (Static site)
+- **Explorer:** https://isiscb-dissertations-explorer.onrender.com (Static site)
 
-Push to main branch triggers automatic deployment.
+Push to main branch triggers automatic deployment of all three services.
 
 ### Render Dashboard
 - Blueprint: Connected to `coronium/isiscb-dissertations` GitHub repo

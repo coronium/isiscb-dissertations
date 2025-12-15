@@ -2,7 +2,7 @@
 
 ## Project Overview
 
-A data visualization web app for exploring ~10,000 History of Science dissertation records. Provides interactive charts, statistics, and comparative analysis tools for researchers.
+A data visualization web app for exploring ~10,000 History of Science dissertation records. Provides 8 interactive D3.js visualizations including animated charts, geographic maps, and comparative analysis tools for researchers.
 
 **Live URL:** https://isiscb-dissertations-explorer.onrender.com
 **Repository:** https://github.com/coronium/isiscb-dissertations (monorepo with editor app)
@@ -42,33 +42,39 @@ POST /api/explorer/refresh-snapshot
 
 ```
 explorer/
-├── index.html              # Main app HTML
+├── index.html                  # Main app HTML
 ├── styles/
-│   ├── isiscb-base.css     # IsisCB UI standards
-│   └── explorer.css        # Explorer-specific styles
+│   ├── isiscb-base.css         # IsisCB UI standards
+│   └── explorer.css            # Explorer-specific styles
 ├── scripts/
-│   ├── config.js           # Configuration (API URL, colors, options)
-│   ├── api.js              # API client for snapshots and auth
-│   ├── auth.js             # Authentication (viewer/editor)
-│   ├── state.js            # Centralized state management with events
-│   ├── app.js              # Main entry point
+│   ├── config.js               # Configuration (API URL, school colors)
+│   ├── api.js                  # API client for snapshots and auth
+│   ├── auth.js                 # Authentication (viewer/editor)
+│   ├── state.js                # Centralized state management with events
+│   ├── app.js                  # Main entry point
 │   ├── charts/
-│   │   ├── timeline.js     # Dissertations over time (area chart)
-│   │   ├── schoolComparison.js  # Multi-school comparison (line chart)
-│   │   ├── pareto.js       # School distribution (bar + cumulative)
-│   │   └── topN.js         # Top N vs rest comparison
+│   │   ├── timeline.js         # Dissertations over time (area chart)
+│   │   ├── schoolComparison.js # Multi-school comparison (line chart)
+│   │   ├── pareto.js           # School distribution (bar + cumulative)
+│   │   ├── topShare.js         # Market concentration over time
+│   │   ├── bumpChart.js        # School rankings over time
+│   │   ├── streamgraph.js      # School output streams
+│   │   ├── geoMap.js           # Geographic distribution (US map)
+│   │   └── racingBar.js        # Top schools racing bar chart
 │   ├── components/
-│   │   ├── controls.js     # Granularity toggle, year slider
-│   │   ├── schoolSelector.js    # School search and selection
-│   │   └── statisticsPanel.js   # Stats grid with filtered metrics
+│   │   ├── controls.js         # Granularity toggle, year slider
+│   │   └── schoolSelector.js   # School search and selection
+│   ├── data/
+│   │   └── schoolLocations.js  # Lat/lng for 50+ institutions
 │   └── utils/
-│       ├── dataTransforms.js    # Aggregation, Pareto, stats calculations
-│       └── formatters.js        # Number, percent, date formatting
-└── data/                   # Generated snapshots (committed to repo)
-    ├── meta.json           # Snapshot metadata
-    ├── timeline.json       # Year/5-year/decade aggregations
-    ├── schools.json        # School counts and Pareto stats
-    └── statistics.json     # Summary statistics
+│       ├── dataTransforms.js   # Aggregation, Pareto, stats calculations
+│       └── formatters.js       # Number, percent, date formatting
+└── data/                       # Generated snapshots (committed to repo)
+    ├── meta.json               # Snapshot metadata
+    ├── timeline.json           # Year/5-year/decade aggregations
+    ├── schools.json            # School counts and Pareto stats
+    ├── statistics.json         # Summary statistics
+    └── school_timeseries.json  # Year-by-year counts for top 50 schools
 ```
 
 ## Authentication
@@ -79,28 +85,63 @@ Same as editor app:
 
 ## Visualizations
 
-### P1: Core
-1. **Dissertations Over Time** - Area chart with granularity toggle (Year/5-Year/Decade)
-2. **School Comparison** - Select up to 5 schools, overlay time series
+### 1. Dissertations Over Time
+**File:** `charts/timeline.js`
+- Area chart showing dissertation output over time
+- Toggle between Year, 5-Year, and Decade granularity
+- Year range slider filters the display
 
-### P2: Distribution Analysis
-3. **School Distribution (Pareto)** - Top 50 schools bar chart with cumulative percentage line, 80-20 reference
-4. **Top Schools vs Rest** - Compare Top 10/25/50/100 against remaining schools
+### 2. School Comparison
+**File:** `charts/schoolComparison.js`
+- Select up to 5 schools to compare side-by-side
+- Toggle between absolute count and percentage of total
+- Lines colored by school (using official school colors when available)
+- Responds to year range and granularity controls
 
-### P3: Statistics Dashboard
-- Total dissertations (filtered by year range)
-- Unique schools (all years)
-- Selected year range
-- Mean/Median per year (filtered)
-- Gini coefficient (all years, measures concentration)
-- HHI - Herfindahl-Hirschman Index (all years)
-- Top 10 share (all years)
-- Growth rates by decade (filtered)
+### 3. School Distribution (Pareto)
+**File:** `charts/pareto.js`
+- Bar chart of top 50 schools by dissertation count
+- Cumulative percentage line overlay
+- 80-20 reference line
+- Updates when year range changes
 
-### Placeholders (Limited Data)
-- Department Breakdown - disabled, limited data coverage
-- Subject Over Time - disabled, limited data coverage
-- Academic Genealogy - coming in future release
+### 4. Market Concentration Over Time
+**File:** `charts/topShare.js`
+- Shows percentage of dissertations from top N schools over time
+- Toggle between Top 5, 10, 15, and 20
+- Reference lines at 25%, 50%, 75%
+- Uses 5-year intervals
+
+### 5. School Rankings Over Time (Bump Chart)
+**File:** `charts/bumpChart.js`
+- Shows rank changes for top 15 schools (1950-2020)
+- Based on 10-year rolling average
+- Lines colored by school colors
+- Labels at end of each line
+
+### 6. School Output Streams (Streamgraph)
+**File:** `charts/streamgraph.js`
+- Flowing streams showing relative contribution of top 15 schools
+- Uses D3 stack with wiggle offset
+- Hover highlights individual streams
+- 5-year rolling average smoothing
+
+### 7. Geographic Distribution
+**File:** `charts/geoMap.js`
+- Animated US map with bubbles at school locations
+- Bubble size = 10-year rolling average output
+- Play/pause/reset controls with speed slider
+- Covers 1950-2020
+- Includes 50+ school locations (US + Toronto)
+- Uses TopoJSON for real US state boundaries
+
+### 8. Top Schools Race (Racing Bar Chart)
+**File:** `charts/racingBar.js`
+- Animated bar chart showing top 15 schools racing over time
+- Based on 10-year rolling average
+- Play/pause/reset controls with speed slider
+- School colors for visual consistency
+- Year display updates during animation
 
 ## Controls
 
@@ -108,18 +149,16 @@ Same as editor app:
 |---------|-------------|
 | Time Granularity | Toggle: Year, 5-Year, Decade (default) |
 | Year Range | Dual-handle slider (1878-2025) |
-| Department | Placeholder dropdown (disabled) |
-| Subject | Placeholder dropdown (disabled) |
 | Refresh Data | Editor-only button to regenerate snapshots |
 
 ## Data Snapshots
 
-Pre-computed JSON files for fast loading (~100KB total):
+Pre-computed JSON files for fast loading:
 
 ### meta.json
 ```json
 {
-  "generated_at": "2025-12-14T23:07:08.439Z",
+  "generated_at": "2025-12-14T...",
   "record_count": 9813,
   "year_range": [1878, 2025],
   "school_count": 541
@@ -141,6 +180,26 @@ Pre-computed JSON files for fast loading (~100KB total):
 - Growth rates by decade
 - HHI, Gini, top N shares
 
+### school_timeseries.json
+- Year-by-year dissertation counts for top 50 schools
+- Used by racing bar chart, geographic map, school comparison, bump chart, streamgraph
+
+## School Colors
+
+Official school colors are defined in `config.js` for 30+ major institutions:
+
+```javascript
+SCHOOL_COLORS: {
+    'Harvard University': '#A51C30',
+    'University of Pennsylvania': '#011F5B',
+    'Princeton University': '#E77500',
+    'University of Wisconsin, Madison': '#C5050C',
+    // ... etc
+}
+```
+
+Fallback colors are used for schools without defined colors.
+
 ## API Endpoints
 
 | Method | Endpoint | Auth | Purpose |
@@ -158,7 +217,6 @@ Centralized in `state.js` with event-based updates:
 State.timeGranularity  // 'year', '5year', 'decade'
 State.yearRange        // [minYear, maxYear]
 State.selectedSchools  // Array of school names (max 5)
-State.topNMode         // '10', '25', '50', '100'
 State.data             // Loaded snapshot data
 
 // Events
@@ -166,12 +224,12 @@ State.data             // Loaded snapshot data
 'granularityChange' // Time granularity changed
 'yearRangeChange'   // Year slider moved
 'schoolsChange'     // Schools selected/deselected
-'topNModeChange'    // Top N toggle changed
 ```
 
 ## Libraries (CDN)
 
 - **D3.js v7** - All chart rendering
+- **TopoJSON Client v3** - US map geography
 - **noUiSlider v15** - Year range slider
 - **Inter font** - Google Fonts
 
@@ -188,17 +246,23 @@ Configured in `render.yaml` as static site:
 Charts render after `showVisualizations()` makes containers visible, then `dataLoaded` is emitted again so D3 can calculate proper dimensions.
 
 ### Year Range Filtering
-- Timeline chart and statistics recalculate based on selected year range
-- School-based metrics (Gini, HHI) show full dataset (no per-school-per-year data in snapshots)
+- Timeline chart, Pareto chart recalculate based on selected year range
+- School comparison uses filtered year range
+- Animated charts (racing bar, geo map) have their own time controls
 
-### Pagination for Snapshot Generation
-Supabase limits queries to 1000 rows by default. The snapshot generator uses `.range()` pagination to fetch all ~10K records.
+### School Timeseries
+Top 50 schools have year-by-year data for:
+- School comparison chart
+- Racing bar chart
+- Geographic map
+- Bump chart
+- Streamgraph
 
-### Snapshot Workflow
-1. Editor clicks "Refresh Data" button (or runs CLI script)
-2. API fetches all dissertations and generates aggregated JSONs
-3. Files written to `explorer/data/`
-4. Editor commits and pushes to trigger Render deploy
+### Geographic Projection
+Uses `d3.geoAlbersUsa()` for continental US. Canadian schools (Toronto, York) are positioned manually in a separate box.
+
+### Bubble Z-Order
+Geographic map uses `bubblesGroup.raise()` to ensure bubbles always appear on top of the map elements.
 
 ## Common Tasks
 
@@ -208,10 +272,14 @@ Supabase limits queries to 1000 rows by default. The snapshot generator uses `.r
 3. Initialize in `app.js` (call `NewChart.init()`)
 4. Subscribe to relevant State events
 
-### Adding a New Statistic
-1. Add calculation in `dataTransforms.js`
-2. Include in snapshot generation (`api/scripts/generate-explorer-snapshots.js` and `api/src/routes/explorer.js`)
-3. Display in `statisticsPanel.js`
+### Adding a School Color
+1. Add to `SCHOOL_COLORS` in `config.js`
+2. Use official school brand color (hex)
+
+### Adding a School Location
+1. Add to `SCHOOL_LOCATIONS` in `scripts/data/schoolLocations.js`
+2. Include `lat`, `lng`, and `city` properties
+3. Add `exclude: true` for non-US/Canada schools
 
 ### Updating Snapshot Schema
 1. Modify generation scripts (both CLI and API route)
@@ -225,5 +293,4 @@ Supabase limits queries to 1000 rows by default. The snapshot generator uses `.r
 |------|---------|
 | `/api/src/routes/explorer.js` | API endpoints for explorer |
 | `/api/scripts/generate-explorer-snapshots.js` | CLI snapshot generator |
-| `/data/migrations/003_explorer_functions.sql` | PostgreSQL aggregation functions |
 | `/render.yaml` | Deployment configuration |

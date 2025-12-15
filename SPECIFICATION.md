@@ -5,7 +5,8 @@
 A web application for searching, viewing, adding, editing, and managing History of Science dissertation records. This system will become the authoritative source for dissertation data, replacing the current Google Sheets workflow.
 
 **Repository:** https://github.com/coronium/isiscb-dissertations
-**Frontend:** https://isiscb-dissertations.onrender.com
+**Editor:** https://isiscb-dissertations.onrender.com
+**Explorer:** https://isiscb-dissertations-explorer.onrender.com
 **API:** https://isiscb-dissertations-api.onrender.com
 **Database:** Supabase PostgreSQL (https://guswnhmbvgnspsdhsqby.supabase.co)
 
@@ -16,8 +17,9 @@ A web application for searching, viewing, adding, editing, and managing History 
 ### Completed
 - ✅ Database schema deployed to Supabase
 - ✅ 9,813 dissertation records imported
-- ✅ API deployed to Render (auth, dissertations, authorities, export routes)
-- ✅ Frontend deployed to Render (login, search/list, editor forms)
+- ✅ API deployed to Render (auth, dissertations, authorities, export, explorer routes)
+- ✅ Editor frontend deployed to Render (login, search/list, editor forms)
+- ✅ Explorer visualization app deployed to Render (8 interactive D3.js charts)
 - ✅ Viewer authentication working
 - ✅ Search by name (authors/advisors), school (autocomplete), title
 - ✅ PostgreSQL RPC functions for JSONB advisor search
@@ -308,6 +310,14 @@ INSERT INTO authority_sequences (prefix, next_value) VALUES
 |--------|----------|-------------|------|
 | GET | `/api/export/csv` | Export all data as CSV | Viewer+ |
 | POST | `/api/export/csv` | Export search results as CSV | Viewer+ |
+
+### Explorer (Visualization App)
+
+| Method | Endpoint | Description | Auth |
+|--------|----------|-------------|------|
+| GET | `/api/explorer/snapshot/meta` | Get snapshot metadata | Viewer+ |
+| POST | `/api/explorer/refresh-snapshot` | Regenerate all JSON snapshots | Editor |
+| GET | `/api/explorer/schools/compare` | Get time series for selected schools | Viewer+ |
 
 ---
 
@@ -1379,7 +1389,7 @@ services:
       - key: EDITOR_VIETH_PASSWORD_HASH
         sync: false
 
-  # Frontend Static Site
+  # Editor Static Site
   - type: web
     name: isiscb-dissertations
     env: static
@@ -1388,6 +1398,23 @@ services:
       - path: /*
         name: Cache-Control
         value: public, max-age=3600
+    routes:
+      - type: rewrite
+        source: /*
+        destination: /index.html
+
+  # Explorer Static Site (Visualizations)
+  - type: web
+    name: isiscb-dissertations-explorer
+    env: static
+    staticPublishPath: ./explorer
+    headers:
+      - path: /*
+        name: Cache-Control
+        value: public, max-age=3600
+      - path: /data/*
+        name: Cache-Control
+        value: no-cache
     routes:
       - type: rewrite
         source: /*
